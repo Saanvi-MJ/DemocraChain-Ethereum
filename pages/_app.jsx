@@ -1,4 +1,4 @@
-import toast, { Toaster } from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 import "../styles/globals.css";
 
 import { VOTER_DAPP_PROVIDER } from "../context/context";

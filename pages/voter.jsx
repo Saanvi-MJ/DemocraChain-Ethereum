@@ -4,9 +4,6 @@ import {
   Cursor,
   Preloader,
   ScrollToTop,
-  Footer,
-  Header,
-  RoadMap,
 } from "../Components/index";
 
 import Input from "../Components/Global/Input";
@@ -26,7 +23,6 @@ const voter = () => {
     notifyError,
     setLoader,
     loader,
-    VOTING_DAPP,
     checkIfWalletIsConnected,
     REGISTER_VOTER,
     GET_SINGLE_VOTER,
