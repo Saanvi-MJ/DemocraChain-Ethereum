@@ -98,8 +98,8 @@ export const VOTER_DAPP_PROVIDER = ({ children }) => {
         url: "https://api.pinata.cloud/pinning/pinJSONToIPFS",
         data: data,
         headers: {
-          pinata_api_key: `12334e89c69a413613e0`,
-          pinata_secret_api_key: `02779bdb49f3443d4501cf68c761b966fddbbe41f44a0905f674b8b558acb873`,
+          pinata_api_key: process.env.PINATA_KEY,
+          pinata_secret_api_key: process.env.PINATA_SECRET,
           "Content-Type": "application/json",
         },
       });
@@ -184,8 +184,8 @@ export const VOTER_DAPP_PROVIDER = ({ children }) => {
         url: "https://api.pinata.cloud/pinning/pinJSONToIPFS",
         data: data,
         headers: {
-          pinata_api_key: `12334e89c69a413613e0`,
-          pinata_secret_api_key: `02779bdb49f3443d4501cf68c761b966fddbbe41f44a0905f674b8b558acb873`,
+          pinata_api_key: process.env.PINATA_KEY,
+          pinata_secret_api_key: process.env.PINATA_SECRET,
           "Content-Type": "application/json",
         },
       });
@@ -392,8 +392,8 @@ export const VOTER_DAPP_PROVIDER = ({ children }) => {
         url: "https://api.pinata.cloud/pinning/pinJSONToIPFS",
         data: data,
         headers: {
-          pinata_api_key: `12334e89c69a413613e0`,
-          pinata_secret_api_key: `02779bdb49f3443d4501cf68c761b966fddbbe41f44a0905f674b8b558acb873`,
+          pinata_api_key: process.env.PINATA_KEY,
+          pinata_secret_api_key: process.env.PINATA_SECRET,
           "Content-Type": "application/json",
         },
       });
@@ -485,8 +485,8 @@ export const VOTER_DAPP_PROVIDER = ({ children }) => {
         url: "https://api.pinata.cloud/pinning/pinJSONToIPFS",
         data: data,
         headers: {
-          pinata_api_key: `12334e89c69a413613e0`,
-          pinata_secret_api_key: `02779bdb49f3443d4501cf68c761b966fddbbe41f44a0905f674b8b558acb873`,
+          pinata_api_key: process.env.PINATA_KEY,
+          pinata_secret_api_key: process.env.PINATA_SECRET,
           "Content-Type": "application/json",
         },
       });
