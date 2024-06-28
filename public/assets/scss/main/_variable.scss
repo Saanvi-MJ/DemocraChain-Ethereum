@@ -1,0 +1,27 @@
+// default font family
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+// default root
+:root {
+	--body-font: 'Poppins', sans-serif;
+	--head-font: 'Open Sans', sans-serif;
+	--transition: all 0.5s ease-in-out;
+	
+	--p1: 154, 217, 83;
+	--s1: 245, 192, 109;
+	--a1: 162, 0, 29;
+	--a2: 0, 0, 0;
+	--a3: 108, 94, 203;
+	--a4: 10, 89, 78;
+	--a5: 82, 0, 15;
+	--nw1: 254, 254, 254;
+	--nw2: 182, 182, 182;
+	--nw3: 168, 173, 198;
+	--nw4: 160, 165, 168;
+	--nb1: 52, 56, 57;
+	--nb2: 35, 38, 39;
+	--nb3: 31, 31, 31;
+	--nb4: 20, 20, 20;
+
+}
+// font-family: "tabler-icons" !important;

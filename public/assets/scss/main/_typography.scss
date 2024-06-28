@@ -1,0 +1,267 @@
+
+.display-one {
+	font-size: 100px;
+}
+
+.display-two {
+	font-size: 72px;
+}
+
+.display-three {
+	font-size: 64px;
+}
+
+.display-four {
+	font-size: 56px;
+}
+
+.display-five {
+	font-size: 48px;
+}
+
+.display-six {
+	font-size: 40px;
+}
+
+.fs-one,
+h1,
+h1 > a {
+	font-size: 48px;
+}
+
+.fs-two,
+h2,
+h2 > a {
+	font-size: 40px;
+}
+
+.fs-three,
+h3,
+h3 > a {
+	font-size: 32px;
+}
+
+.fs-four,
+h4,
+h4 > a {
+	font-size: 24px;
+}
+
+.fs-five,
+h5,
+h5 > a {
+	font-size: 20px;
+}
+
+.fs-six,
+h6,
+h6 > a {
+	font-size: 16px;
+}
+
+.fs-six-up {
+	font-size: 18px;
+}
+
+.fs-four-up {
+	font-size: 28px;
+}
+
+.fs-seven {
+	font-size: 14px;
+}
+
+.fs-eight {
+	font-size: 12px;
+}
+
+table thead tr th {
+	font-size: 16px;
+	line-height: 150%;
+}
+
+a, 
+p,
+button,
+span,
+label,
+li {
+	font-size: 16px;
+	line-height: 150%;
+}
+
+@media (max-width: 1199px) {
+	.display-one {
+		font-size: 85px;
+	}
+	.display-two {
+		font-size: 68px;
+	}
+	.display-three {
+		font-size: 60px;
+	}
+	h1, h1>a {
+		font-size: 40px;
+	}
+	h2, h2>a {
+		font-size: 34px;
+	}
+	h3, h3>a {
+		font-size: 30px;
+	}
+	.preloader {
+		background-size: 30%;
+	}
+	.fs-four-up {
+		font-size: 26px;
+	}
+}
+
+.pt-120 {
+	padding-top: 120px;
+}
+
+.pb-120 {
+	padding-bottom: 120px;
+}
+
+@include minQuery(991){
+	.pb-lg-120{
+		padding-bottom: 120px !important;
+	}
+}
+
+@media (max-width: 991px) {
+	// Normalize
+	.display-one {
+		font-size: 68px;
+	}
+	
+	.display-two {
+		font-size: 62px;
+	}
+	
+	.display-three {
+		font-size: 56px;
+	}
+	
+	.display-four {
+		font-size: 48px;
+	}
+	
+	.display-five {
+		font-size: 42px;
+	}
+	
+	.display-six {
+		font-size: 32px;
+	}
+	
+	.fs-one,
+	h1,
+	h1 > a {
+		font-size: 36px;
+	}
+	
+	.fs-two,
+	h2,
+	h2 > a {
+		font-size: 30px;
+	}
+	
+	.fs-three,
+	h3,
+	h3 > a {
+		font-size: 24px;
+	}
+	
+	.fs-four,
+	h4,
+	h4 > a {
+		font-size: 20px;
+	}
+	
+	.fs-five,
+	h5,
+	h5 > a {
+		font-size: 18px;
+	}
+	
+	.fs-six,
+	h6,
+	h6 > a {
+		font-size: 14px;
+	}
+
+	.fs-seven {
+		font-size: 13px;
+	}
+
+	.fs-six-up {
+		font-size: 16px;
+	}
+	
+	.fs-four-up {
+		font-size: 24px;
+	}
+	
+	table thead tr th {
+		font-size: 14px;
+	}
+
+	a,
+	p,
+	span,
+	button,
+	label,
+	li {
+		font-size: 14px;
+	}
+
+	.pt-120 {
+		padding-top: 60px;
+	}
+	.pb-120 {
+		padding-bottom: 60px;
+	}
+
+	.banner-section .overlay .sec-img{
+		display: none;
+	}
+	.banner-section .banner-content {
+		padding: 80px 0 90px;
+	}
+}
+
+@media (max-width: 575px) {
+	.display-one {
+		font-size: 56px;
+	}
+	
+	.display-two {
+		font-size: 48px;
+	}
+	
+	.display-three {
+		font-size: 38px;
+	}
+	
+	.display-four {
+		font-size: 30px;
+	}
+	
+	.display-five {
+		font-size: 24px;
+	}
+	
+	.display-six {
+		font-size: 20px;
+	}
+
+	.pt-120 {
+		padding-top: 50px;
+	}
+	.pb-120 {
+		padding-bottom: 50px;
+	}
+}
