@@ -3,7 +3,7 @@ import React from "react";
 const Input = ({ name, placeholder, type, handleClick }) => {
   return (
     <div className="single-input">
-      <label className="mb-2 nw1-color" for="lname">
+      <label className="mb-2 nw1-color" htmlFor="lname">
         {name}
       </label>
       <input

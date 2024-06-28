@@ -48,14 +48,14 @@ const Upload = ({ setLoader, notifySuccess, notifyError, setPdf }) => {
   return (
     <div {...getRootProps()} className="messageBox">
       <div className="fileUploadWrapper">
-        <label for="file">
+        <label htmlFor="file">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 337 337"
           >
             <circle
-              stroke-width="20"
+              strokeWidth="20"
               stroke="#6c6c6c"
               fill="none"
               r="158.5"
@@ -63,14 +63,14 @@ const Upload = ({ setLoader, notifySuccess, notifyError, setPdf }) => {
               cx="168.5"
             ></circle>
             <path
-              stroke-linecap="round"
-              stroke-width="25"
+              strokeLinecap="round"
+              strokeWidth="25"
               stroke="#6c6c6c"
               d="M167.759 79V259"
             ></path>
             <path
-              stroke-linecap="round"
-              stroke-width="25"
+              strokeLinecap="round"
+              strokeWidth="25"
               stroke="#6c6c6c"
               d="M79 167.138H259"
             ></path>

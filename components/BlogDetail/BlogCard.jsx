@@ -224,7 +224,7 @@ const BlogCard = () => {
                     <div className="row">
                       <div className="col-lg-6">
                         <div className="single-input">
-                          <label className="label fw_500 nw1-color mb-4" for="name">
+                          <label className="label fw_500 nw1-color mb-4" htmlFor="name">
                             Name
                           </label>
                           <input
@@ -241,7 +241,7 @@ const BlogCard = () => {
                         <div className="single-input">
                           <label
                             className="label fw_500 nw1-color mb-4"
-                            for="email"
+                            htmlFor="email"
                           >
                             Email
                           </label>
@@ -257,7 +257,7 @@ const BlogCard = () => {
                       </div>
                     </div>
                     <div className="input-single">
-                      <label className="label fw_500 nw1-color mb-4" for="message">
+                      <label className="label fw_500 nw1-color mb-4" htmlFor="message">
                         Message
                       </label>
                       <textarea
