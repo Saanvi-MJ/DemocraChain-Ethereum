@@ -1236,14 +1236,14 @@ select {
   width: 0;
   height: 0;
   border-top: 60px solid rgba(0, 0, 0, 0);
-  border-right: 60px solid rgba(var(--p1), 1);
+  border-right: 60px solid rgba(var(--s1), 1);
   border-bottom: 60px solid rgba(0, 0, 0, 0);
   border-radius: 50%;
   animation: rotateIn 3s linear infinite;
 }
 
 .btn-popup-animation:before {
-  border-left: 60px solid rgba(var(--p1), 1);
+  border-left: 60px solid rgba(var(--s1), 1);
 }
 
 .btn-popup-animation.small i {

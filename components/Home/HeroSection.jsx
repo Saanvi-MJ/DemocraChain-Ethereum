@@ -1,9 +1,8 @@
 import Link from "next/link";
-import React from "react";
-
-const motto = "Innovate, Invest, Influence, ";
 
 const HeroSection = ({ initialData, higest }) => {
+  const motto = "Innovate, Invest, Influence, ";
+
   return (
     <section className="hero-section position-relative z-0 ">
       <div className="animation position-absolute top-0 left-0 w-100 h-100 z-n1">
@@ -24,7 +23,9 @@ const HeroSection = ({ initialData, higest }) => {
                       {motto.split("").map((l, idx) => (
                         <span
                           style={{
-                            transform: `rotate(${(idx * 360) / motto.length}deg)`,
+                            transform: `rotate(${
+                              (idx * 360) / motto.length
+                            }deg)`,
                           }}
                         >
                           {l}

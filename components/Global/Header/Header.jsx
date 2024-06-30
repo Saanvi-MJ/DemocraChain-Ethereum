@@ -32,7 +32,10 @@ const Header = () => {
               <span></span>
               <span></span>
             </button>
-            <Link href="/" className="navbar-brand m-0 p-0 d-flex align-items-center gap-5 gap-xl-5 me-2">
+            <Link
+              href="/"
+              className="navbar-brand m-0 p-0 d-flex align-items-center gap-5 gap-xl-5 me-2"
+            >
               <a>
                 <img
                   src="assets/images/fav.png"
@@ -61,7 +64,8 @@ const Header = () => {
                   <div className="single-item">
                     <Link href="/candidate">
                       <a className="cmn-btn fw-bold py-2 px-2 px-sm-3 px-lg-4 align-items-center gap-1">
-                        Candidate <i className="ti ti-arrow-right fw-semibold fs-six-up"></i>
+                        Candidate{" "}
+                        <i className="ti ti-arrow-right fw-semibold fs-six-up"></i>
                       </a>
                     </Link>
                   </div>
@@ -72,13 +76,17 @@ const Header = () => {
                     onClick={() => clickConnect()}
                     className="cmn-btn fw-bold py-2 px-2 px-sm-3 px-lg-4 align-items-center gap-1"
                   >
-                    Connect Wallet <i className="ti ti-arrow-right fw-semibold fs-six-up"></i>
+                    Connect Wallet{" "}
+                    <i className="ti ti-arrow-right fw-semibold fs-six-up"></i>
                   </button>
                 </div>
               )}
             </div>
           </div>
-          <div className="collapse navbar-collapse justify-content-center" id="navbar-content">
+          <div
+            className="collapse navbar-collapse justify-content-center"
+            id="navbar-content"
+          >
             <ul className="navbar-nav gap-2 gap-lg-3 gap-xxl-8 align-self-center mx-auto mt-4 mt-lg-0">
               <li className="dropdown show-dropdown">
                 <Link href="/">
@@ -96,12 +104,16 @@ const Header = () => {
                 <ul className="dropdown-menu">
                   <li>
                     <Link href="/all-candidates">
-                      <a className="dropdown-item header-hover-link">All Candidates</a>
+                      <a className="dropdown-item header-hover-link">
+                        All Candidates
+                      </a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/approve-candidates">
-                      <a className="dropdown-item header-hover-link">Approved Candidates</a>
+                      <a className="dropdown-item header-hover-link">
+                        Approved Candidates
+                      </a>
                     </Link>
                   </li>
                 </ul>
@@ -117,17 +129,23 @@ const Header = () => {
                 <ul className="dropdown-menu">
                   <li>
                     <Link href="/all-voters">
-                      <a className="dropdown-item header-hover-link">All Voters</a>
+                      <a className="dropdown-item header-hover-link">
+                        All Voters
+                      </a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/approve-voters">
-                      <a className="dropdown-item header-hover-link">Approve Voters</a>
+                      <a className="dropdown-item header-hover-link">
+                        Approve Voters
+                      </a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/voted-voters">
-                      <a className="dropdown-item header-hover-link">Voted Voters</a>
+                      <a className="dropdown-item header-hover-link">
+                        Voted Voters
+                      </a>
                     </Link>
                   </li>
                 </ul>
@@ -150,37 +168,22 @@ const Header = () => {
                 <ul className="dropdown-menu">
                   <li>
                     <Link href="/about">
-                      <a className="dropdown-item header-hover-link">About Us</a>
+                      <a className="dropdown-item header-hover-link">
+                        About Us
+                      </a>
                     </Link>
                   </li>
-                  <li>
-                    <Link href="/legal-docs">
-                      <a className="dropdown-item header-hover-link">Legal Docs</a>
-                    </Link>
-                  </li>
+
                   <li>
                     <Link href="/contact">
-                      <a className="dropdown-item header-hover-link">Contact Us</a>
+                      <a className="dropdown-item header-hover-link">
+                        Contact Us
+                      </a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/roadmap">
                       <a className="dropdown-item header-hover-link">Roadmap</a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/support">
-                      <a className="dropdown-item header-hover-link">Support</a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/terms-conditions">
-                      <a className="dropdown-item header-hover-link">Terms & Conditions</a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/privacy-policy">
-                      <a className="dropdown-item header-hover-link">Privacy Policy</a>
                     </Link>
                   </li>
                 </ul>
@@ -200,7 +203,8 @@ const Header = () => {
                 <div className="single-item">
                   <Link href="/candidate">
                     <a className="cmn-btn fw-bold py-2 px-2 px-sm-3 px-lg-4 align-items-center gap-1">
-                      Candidate <i className="ti ti-arrow-right fw-semibold fs-six-up"></i>
+                      Candidate{" "}
+                      <i className="ti ti-arrow-right fw-semibold fs-six-up"></i>
                     </a>
                   </Link>
                 </div>
@@ -211,7 +215,8 @@ const Header = () => {
                   onClick={() => clickConnect()}
                   className="cmn-btn fw-bold py-2 px-2 px-sm-3 px-lg-4 align-items-center gap-1"
                 >
-                  Connect Wallet <i className="ti ti-arrow-right fw-semibold fs-six-up"></i>
+                  Connect Wallet{" "}
+                  <i className="ti ti-arrow-right fw-semibold fs-six-up"></i>
                 </button>
               </div>
             )}
