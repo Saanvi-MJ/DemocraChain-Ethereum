@@ -69,7 +69,7 @@ const voter = () => {
 
   return (
     <>
-      <Preloader />
+      {/* <Preloader /> */}
       <ScrollToTop />
       <Cursor />
 

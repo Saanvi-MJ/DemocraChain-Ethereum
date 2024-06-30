@@ -11,7 +11,7 @@ import {
 const contact = () => {
   return (
     <>
-      <Preloader />
+      {/* <Preloader /> */}
       <ScrollToTop />
       <Cursor />
       <Header />

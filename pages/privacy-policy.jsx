@@ -11,7 +11,7 @@ import {
 const privacyPolicy = () => {
   return (
     <>
-      <Preloader />
+      {/* <Preloader /> */}
       <ScrollToTop />
       <Cursor />
       <Header />

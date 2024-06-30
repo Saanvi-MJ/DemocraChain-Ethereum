@@ -10,7 +10,7 @@ import {
 const legalDocs = () => {
   return (
     <>
-      <Preloader />
+      {/* <Preloader /> */}
       <ScrollToTop />
       <Cursor />
       <Header />

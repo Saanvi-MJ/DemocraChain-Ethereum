@@ -10,7 +10,7 @@ import {
 const support = () => {
   return (
     <>
-      <Preloader />
+      {/* <Preloader /> */}
       <ScrollToTop />
       <Cursor />
       <Header />

@@ -54,7 +54,7 @@ const voterDetails = () => {
   };
   return (
     <>
-      <Preloader />
+      {/* <Preloader /> */}
       <ScrollToTop />
       <Cursor />
       <Header />

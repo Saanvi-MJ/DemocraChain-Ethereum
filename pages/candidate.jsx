@@ -77,7 +77,7 @@ const signup = () => {
 
   return (
     <>
-      <Preloader />
+      {/* <Preloader /> */}
       <ScrollToTop />
       <Cursor />
       <section className="sign nb4-bg h-100 d-flex align-items-center position-relative z-0">

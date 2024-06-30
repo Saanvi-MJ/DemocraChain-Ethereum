@@ -33,7 +33,7 @@ const registerVoters = () => {
   }, []);
   return (
     <>
-      <Preloader />
+      {/* <Preloader /> */}
       <ScrollToTop />
       <Cursor />
       <Header />

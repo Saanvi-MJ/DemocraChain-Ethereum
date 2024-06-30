@@ -46,7 +46,7 @@ const index = () => {
   }, []);
   return (
     <>
-      <Preloader />
+      {/* <Preloader /> */}
       <ScrollToTop />
       <Cursor />
       <Header />

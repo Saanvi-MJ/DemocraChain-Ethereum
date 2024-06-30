@@ -60,7 +60,7 @@ const registerCandidate = () => {
   }, []);
   return (
     <>
-      <Preloader />
+      {/* <Preloader /> */}
       <ScrollToTop />
       <Cursor />
       <Header />

@@ -11,7 +11,7 @@ import {
 const termsConditions = () => {
   return (
     <>
-      <Preloader />
+      {/* <Preloader /> */}
       <ScrollToTop />
       <Cursor />
       <Header />
