@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Blog = () => {
@@ -27,13 +28,12 @@ const Blog = () => {
               <span className="heading s1-color fs-five mb-5">Blog</span>
               <h3>News & Analysis</h3>
             </div>
-            <a
-              href="blog.html"
-              className="cmn-btn link fs-six-up  gap-2 gap-lg-3 align-items-center"
-            >
-              {" "}
-              See All <i className="ti ti-arrow-right fs-four"></i>
-            </a>
+            <Link href="/">
+              <a className="cmn-btn link fs-six-up  gap-2 gap-lg-3 align-items-center">
+                {" "}
+                See All <i className="ti ti-arrow-right fs-four"></i>
+              </a>
+            </Link>
           </div>
         </div>
         <div className="row gy-6">
@@ -45,19 +45,21 @@ const Blog = () => {
                   alt="Image"
                   className="w-100"
                 />
-                <a
-                  href="#"
+                <Link
+                  href="/"
                   className="border border-color second nw1-color fs-seven rounded-3 position-absolute top-0 end-0 py-1 px-3 mt-5 me-5"
                 >
                   News
-                </a>
+                </Link>
               </div>
               <div className="blog_news__content py-6 py-lg-7 py-xxl-8 px-4 px-lg-5 px-xxl-6">
-                <a href="blog-details.html">
-                  <h5 className="mb-4 mb-lg-5">
-                    Trading Psychology: Mastering Your Mind for Profit
-                  </h5>
-                </a>
+                <Link href="/">
+                  <a>
+                    <h5 className="mb-4 mb-lg-5">
+                      Trading Psychology: Mastering Your Mind for Profit
+                    </h5>
+                  </a>
+                </Link>
                 <div className="fs-seven fw_500 d-flex row-gap-0 flex-wrap gap-3 mb-4 mb-lg-5">
                   August 17,2023 <span>|</span> Written by jason Turner
                 </div>
@@ -65,13 +67,12 @@ const Blog = () => {
                   Trading in financial markets involves a wide employ to make
                   informed decisions.
                 </p>
-                <a
-                  href="blog-details.html"
-                  className="link fs-five fw-semibold d-flex gap-2 gap-lg-3 align-items-center mt-6  mt-lg-8"
-                >
-                  {" "}
-                  Continue Reading <i className="ti ti-arrow-right"></i>
-                </a>
+                <Link href="/">
+                  <a className="link fs-five fw-semibold d-flex gap-2 gap-lg-3 align-items-center mt-6  mt-lg-8">
+                    {" "}
+                    Continue Reading <i className="ti ti-arrow-right"></i>
+                  </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -83,19 +84,19 @@ const Blog = () => {
                   alt="Image"
                   className="w-100"
                 />
-                <a
-                  href="#"
+                <Link
+                  href="/"
                   className="border border-color second nw1-color fs-seven rounded-3 position-absolute top-0 end-0 py-1 px-3 mt-5 me-5"
                 >
                   Features
-                </a>
+                </Link>
               </div>
               <div className="blog_news__content py-6 py-lg-7 py-xxl-8 px-4 px-lg-5 px-xxl-6">
-                <a href="blog-details.html">
+                <Link href="/">
                   <h5 className="mb-4 mb-lg-5">
                     Trading Pitfalls Common Mistakes and How to Avoid Them...
                   </h5>
-                </a>
+                </Link>
                 <div className="fs-seven fw_500 d-flex flex-wrap row-gap-0 gap-3 mb-4 mb-lg-5">
                   August 17,2023 <span>|</span> Written by jason Turner
                 </div>
@@ -103,13 +104,12 @@ const Blog = () => {
                   Trading in financial markets involves a wide employ to make
                   informed decisions.
                 </p>
-                <a
-                  href="blog-details.html"
-                  className="link fs-five fw-semibold d-flex gap-2 gap-lg-3 align-items-center mt-6  mt-lg-8"
-                >
-                  {" "}
-                  Continue Reading <i className="ti ti-arrow-right"></i>
-                </a>
+                <Link href="/">
+                  <a className="link fs-five fw-semibold d-flex gap-2 gap-lg-3 align-items-center mt-6  mt-lg-8">
+                    {" "}
+                    Continue Reading <i className="ti ti-arrow-right"></i>
+                  </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -121,19 +121,19 @@ const Blog = () => {
                   alt="Image"
                   className="w-100"
                 />
-                <a
-                  href="#"
+                <Link
+                  href="/"
                   className="border border-color second nw1-color fs-seven rounded-3 position-absolute top-0 end-0 py-1 px-3 mt-5 me-5"
                 >
                   News
-                </a>
+                </Link>
               </div>
               <div className="blog_news__content py-6 py-lg-7 py-xxl-8 px-4 px-lg-5 px-xxl-6">
-                <a href="blog-details.html">
+                <Link href="/">
                   <h5 className="mb-4 mb-lg-5">
                     Trading Platforms: Tools for Success in Financial Markets
                   </h5>
-                </a>
+                </Link>
                 <div className="fs-seven fw_500 d-flex flex-wrap row-gap-0 gap-3 mb-4 mb-lg-5">
                   August 17,2023 <span>|</span> Written by jason Turner
                 </div>
@@ -141,13 +141,12 @@ const Blog = () => {
                   Trading in financial markets involves a wide employ to make
                   informed decisions.
                 </p>
-                <a
-                  href="blog-details.html"
-                  className="link fs-five fw-semibold d-flex gap-2 gap-lg-3 align-items-center mt-6  mt-lg-8"
-                >
-                  {" "}
-                  Continue Reading <i className="ti ti-arrow-right"></i>
-                </a>
+                <Link href="/">
+                  <a className="link fs-five fw-semibold d-flex gap-2 gap-lg-3 align-items-center mt-6  mt-lg-8">
+                    {" "}
+                    Continue Reading <i className="ti ti-arrow-right"></i>
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

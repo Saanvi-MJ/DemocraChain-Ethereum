@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const ContactFrom = () => {
@@ -39,29 +40,32 @@ const ContactFrom = () => {
                 <h3>Our socials media</h3>
                 <ul className="social-area d-center justify-content-start gap-2 gap-md-3 mt-7 mt-lg-8">
                   <li>
-                    <a className="d-center cus-rounded-1 fs-four" href="#">
-                      <i className="ti ti-brand-facebook"></i>
-                    </a>
+                    <Link href="/">
+                      <a className="d-center fs-four">
+                        <i className="ti ti-brand-facebook" />
+                      </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="d-center cus-rounded-1 fs-four" href="#">
-                      <i className="ti ti-brand-twitch"></i>
-                    </a>
+                    <Link href="/">
+                      <a className="d-center fs-four">
+                        <i className="ti ti-brand-twitch" />
+                      </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="d-center cus-rounded-1 fs-four" href="#">
-                      <i className="ti ti-brand-instagram"></i>
-                    </a>
+                    <Link href="/">
+                      <a className="d-center fs-four">
+                        <i className="ti ti-brand-instagram" />
+                      </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="d-center cus-rounded-1 fs-four" href="#">
-                      <i className="ti ti-brand-discord-filled"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a className="d-center cus-rounded-1 fs-four" href="#">
-                      <i className="ti ti-brand-youtube"></i>
-                    </a>
+                    <Link href="/">
+                      <a className="d-center fs-four">
+                        <i className="ti ti-brand-discord-filled" />
+                      </a>
+                    </Link>
                   </li>
                 </ul>
               </div>

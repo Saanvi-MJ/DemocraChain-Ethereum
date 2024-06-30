@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const HeroSection = ({ initialData, higest }) => {
-  const motto = "Innovate, Invest, Influence, ";
+  const motto = "Vote Loud, Vote Proud ";
 
   return (
     <section className="hero-section position-relative z-0 ">

@@ -113,12 +113,12 @@ const Member = ({
           ))}
 
           <div className="col-12 mt-10 mt-lg-15 d-flex justify-content-center">
-            <a
-              href="#"
+            <Link
+              href="/"
               className="cmn-btn py-2 py-lg-3 px-4 px-lg-6 gap-2 gap-lg-3 align-items-center"
             >
               View More
-            </a>
+            </Link>
           </div>
         </div>
       </div>

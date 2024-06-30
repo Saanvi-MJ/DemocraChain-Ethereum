@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Company = () => {
@@ -19,7 +20,6 @@ const Company = () => {
                 className="cus-rounded-1 w-100"
                 alt="Imgae"
               />
-             
             </div>
           </div>
           <div className="col-lg-6 col-xxl-7">
@@ -39,13 +39,12 @@ const Company = () => {
               <div className="col-xxl-12 mt-8 mt-md-10 mt-xxl-13">
                 <div className="company-story__part d-flex align-items-sm-center flex-column flex-sm-row">
                   <div className="btn-area mt-8 mt-sm-0 me-2 me-sm-6 me-xxl-10 order-2 order-sm-0">
-                    <a
-                      href="signup.html"
-                      className="cmn-btn cmn-btn-circle d-center flex-column fw_500"
-                    >
-                      <i className="ti ti-arrow-up-right fs-three" />
-                      Start Now
-                    </a>
+                    <Link href="/">
+                      <a className="cmn-btn cmn-btn-circle d-center flex-column fw_500">
+                        <i className="ti ti-arrow-up-right fs-three" />
+                        Start Now
+                      </a>
+                    </Link>
                   </div>
                   <div className="content">
                     <h3 className="mb-3">Who We Are</h3>

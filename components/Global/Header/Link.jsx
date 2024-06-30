@@ -1,25 +1,26 @@
 import React from "react";
+import NextLink from "next/link";
 
 const Link = () => {
   const navMenu = [
     {
-      link: "#",
+      link: "/",
       menu: "Home",
     },
     {
-      link: "#",
+      link: "/",
       menu: "Markets",
     },
     {
-      link: "#",
+      link: "/",
       menu: "Company",
     },
     {
-      link: "#",
+      link: "/",
       menu: "Education",
     },
     {
-      link: "#",
+      link: "/",
       menu: "Resources",
     },
   ];
@@ -31,9 +32,9 @@ const Link = () => {
       <ul className="navbar-nav gap-2 gap-lg-3 gap-xxl-8  align-self-center mx-auto mt-4 mt-lg-0">
         {navMenu.map((menu, index) => (
           <li key={index + 1} className="dropdown show-dropdown">
-            <Link className=" dropdown-nav" href={menu.menu}>
+            <NextLink className=" dropdown-nav" href={menu.menu}>
               {menu.menu}
-            </Link>
+            </NextLink>
           </li>
         ))}
       </ul>

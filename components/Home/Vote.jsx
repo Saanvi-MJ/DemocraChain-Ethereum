@@ -24,7 +24,9 @@ const Vote = () => {
         <div className="row gy-10 gy-xxl-0 justify-content-center justify-content-xxl-between align-items-center">
           <div className="col-lg-6 col-xxl-5">
             <div className="trade_on__content">
-              <span className="heading s1-color fs-five mb-5">Trade On Our</span>
+              <span className="heading s1-color fs-five mb-5">
+                Trade On Our
+              </span>
               <h3 className="mb-4 mb-lg-5">World Class Platform</h3>
               <p className="fs-six mx-ch">
                 Trading in financial markets involves a wide range of strategies
@@ -46,16 +48,15 @@ const Vote = () => {
                   Management in Trading{" "}
                 </li>
                 <li className="d-flex align-items-center gap-3 fs-six-up">
-                  <i className="ti ti-circle-check s1-color fs-four"></i>Technical
-                  vs. Fundamental Analysis{" "}
+                  <i className="ti ti-circle-check s1-color fs-four"></i>
+                  Technical vs. Fundamental Analysis{" "}
                 </li>
               </ul>
-              <a
-                href="signup.html"
-                className="cmn-btn secondary-alt fs-six-up nb4-xxl-bg gap-2 gap-lg-3 align-items-center py-2 px-5 py-lg-3 px-lg-6 mt-7 mt-xxl-8"
-              >
-                Sign up Now <i className="ti ti-arrow-right fs-four"></i>
-              </a>
+              <Link href="/">
+                <a className="cmn-btn secondary-alt fs-six-up nb4-xxl-bg gap-2 gap-lg-3 align-items-center py-2 px-5 py-lg-3 px-lg-6 mt-7 mt-xxl-8">
+                  Sign up Now <i className="ti ti-arrow-right fs-four"></i>
+                </a>
+              </Link>
             </div>
           </div>
           <div className="col-md-8 col-lg-6">

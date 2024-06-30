@@ -3,6 +3,7 @@ import React, { useState } from "react";
 //INTERNAL IMPORT
 import { shortenAddress } from "../../utils/utils";
 import Preview from "../Global/Preview";
+import Link from "next/link";
 
 const Details = ({
   candidate,
@@ -276,29 +277,32 @@ const Details = ({
 
                 <ul className="social-area d-flex align-items-center gap-2 gap-md-3 mt-8 mt-lg-10">
                   <li>
-                    <a className="d-center cus-rounded-1 fs-four" href="#">
-                      <i className="ti ti-brand-facebook"></i>
-                    </a>
+                    <Link href="/">
+                      <a className="d-center fs-four">
+                        <i className="ti ti-brand-facebook" />
+                      </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="d-center cus-rounded-1 fs-four" href="#">
-                      <i className="ti ti-brand-twitch"></i>
-                    </a>
+                    <Link href="/">
+                      <a className="d-center fs-four">
+                        <i className="ti ti-brand-twitch" />
+                      </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="d-center cus-rounded-1 fs-four" href="#">
-                      <i className="ti ti-brand-instagram"></i>
-                    </a>
+                    <Link href="/">
+                      <a className="d-center fs-four">
+                        <i className="ti ti-brand-instagram" />
+                      </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="d-center cus-rounded-1 fs-four" href="#">
-                      <i className="ti ti-brand-discord-filled"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a className="d-center cus-rounded-1 fs-four" href="#">
-                      <i className="ti ti-brand-youtube"></i>
-                    </a>
+                    <Link href="/">
+                      <a className="d-center fs-four">
+                        <i className="ti ti-brand-discord-filled" />
+                      </a>
+                    </Link>
                   </li>
                 </ul>
               </div>

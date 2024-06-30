@@ -5,7 +5,7 @@ const Mission = () => {
     <section className="provide-world our_mission pt-120 pb-120 position-relative z-0">
       <div className="animation position-absolute top-0 left-0 w-100 h-100 z-n1">
         <img
-          src="assets/images/vector7.png"
+          src="assets/images/vector8.png"
           alt="vector"
           className="position-absolute bottom-0 pt-6 pt-xl-15 d-none d-lg-flex push_animat"
         />

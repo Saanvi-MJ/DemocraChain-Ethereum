@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -53,28 +54,24 @@ const Footer = () => {
               <h4 className="mb-6 mb-lg-8">Quick Link</h4>
               <ul className="footer_list d-flex flex-column gap-2 gap-sm-3 gap-md-4">
                 <li>
-                  <a
-                    className="n2-color d-flex align-items-center"
-                    href="market.html"
-                  >
-                    {" "}
-                    markets
-                  </a>
+                  <Link className="n2-color d-flex align-items-center" href="/">
+                    Markets
+                  </Link>
                 </li>
                 <li>
-                  <a className="n2-color" href="#">
+                  <Link className="n2-color" href="/">
                     Education
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="n2-color" href="#">
+                  <Link className="n2-color" href="/">
                     Support
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="n2-color" href="#">
+                  <Link className="n2-color" href="/">
                     Legal docs
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -84,19 +81,19 @@ const Footer = () => {
               <h4 className="mb-6 mb-lg-8">Company</h4>
               <ul className="footer_list d-flex flex-column gap-2 gap-sm-3 gap-md-4">
                 <li>
-                  <a className="n2-color" href="#">
+                  <Link className="n2-color" href="/">
                     About
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="n2-color" href="#">
+                  <Link className="n2-color" href="/">
                     Blog
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="n2-color" href="#">
+                  <Link className="n2-color" href="/">
                     Carreers
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -106,19 +103,19 @@ const Footer = () => {
               <h4 className="mb-6 mb-lg-8">Legal</h4>
               <ul className="footer_list d-flex flex-column gap-2 gap-sm-3 gap-md-4">
                 <li>
-                  <a className="n2-color" href="#">
+                  <Link className="n2-color" href="/">
                     Terms & Conditions
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="n2-color" href="#">
+                  <Link className="n2-color" href="/">
                     Privacy & Policy
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="n2-color" href="contact.html">
+                  <Link className="n2-color" href="/">
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -127,9 +124,9 @@ const Footer = () => {
             <div className="footer__part">
               <h4 className="mb-6 mb-lg-8">Contact Us</h4>
               <div className="d-flex flex-column gap-2 gap-sm-3 gap-md-4">
-                <a href="#">
-                  <span className="__cf_email__">[email&#160;protected]</span>
-                </a>
+                <Link href="/">
+                  <span className="__cf_email__">randomemail@mail.co</span>
+                </Link>
                 <a href="tel:+123456789">+0123 456 789</a>
               </div>
             </div>
@@ -153,29 +150,32 @@ const Footer = () => {
               </p>
               <ul className="social-area d-center gap-2 gap-md-3">
                 <li>
-                  <a className="d-center cus-rounded-1 fs-four" href="#">
-                    <i className="ti ti-brand-facebook"></i>
-                  </a>
+                  <Link href="/">
+                    <a className="d-center fs-four">
+                      <i className="ti ti-brand-facebook" />
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="d-center cus-rounded-1 fs-four" href="#">
-                    <i className="ti ti-brand-twitch"></i>
-                  </a>
+                  <Link href="/">
+                    <a className="d-center fs-four">
+                      <i className="ti ti-brand-twitch" />
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="d-center cus-rounded-1 fs-four" href="#">
-                    <i className="ti ti-brand-instagram"></i>
-                  </a>
+                  <Link href="/">
+                    <a className="d-center fs-four">
+                      <i className="ti ti-brand-instagram" />
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="d-center cus-rounded-1 fs-four" href="#">
-                    <i className="ti ti-brand-discord-filled"></i>
-                  </a>
-                </li>
-                <li>
-                  <a className="d-center cus-rounded-1 fs-four" href="#">
-                    <i className="ti ti-brand-youtube"></i>
-                  </a>
+                  <Link href="/">
+                    <a className="d-center fs-four">
+                      <i className="ti ti-brand-discord-filled" />
+                    </a>
+                  </Link>
                 </li>
               </ul>
             </div>

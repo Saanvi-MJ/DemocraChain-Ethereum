@@ -10,7 +10,7 @@ const Banner = () => {
             <nav aria-label="breadcrumb">
               <ol className="breadcrumb mb-0">
                 <li className="breadcrumb-item">
-                  <a href="index.html">Home</a>
+                  <Link href="/">Home</Link>
                 </li>
                 <li
                   className="breadcrumb-item ms-2 ps-7 active"
