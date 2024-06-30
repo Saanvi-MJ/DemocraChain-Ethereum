@@ -8,7 +8,6 @@ import HeroSection from "./Home/HeroSection";
 import WhyVote from "./Home/WhyVote";
 import Blog from "./Home/Blog";
 import Provide from "./Home/Provide";
-import Testimonial from "./Home/Testimonial";
 import Vote from "./Home/Vote";
 
 import About from "./About/About";
@@ -27,7 +26,6 @@ export {
   WhyVote,
   Blog,
   Provide,
-  Testimonial,
   Vote,
   About,
   Team,
