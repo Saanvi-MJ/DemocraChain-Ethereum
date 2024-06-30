@@ -1,6 +1,8 @@
 import Link from "next/link";
 import React from "react";
 
+const motto = "Innovate, Invest, Influence, ";
+
 const HeroSection = ({ initialData, higest }) => {
   return (
     <section className="hero-section position-relative z-0 ">
@@ -18,7 +20,17 @@ const HeroSection = ({ initialData, higest }) => {
               <div className="pt-xxl-10 pb-xxl-10">
                 <div className="circle-text first d-center cus-z1 position-absolute end-0 top-0 d-none d-xxl-flex  me-lg-10 mt-lg-10">
                   <div className="text d-center">
-                    <p className="fs-six">Innovate, Invest, Influence</p>
+                    <p className="fs-six">
+                      {motto.split("").map((l, idx) => (
+                        <span
+                          style={{
+                            transform: `rotate(${(idx * 360) / motto.length}deg)`,
+                          }}
+                        >
+                          {l}
+                        </span>
+                      ))}
+                    </p>
                   </div>
                   <img
                     src="assets/images/circle_star.png"

@@ -37,11 +37,13 @@ const FAQ = () => {
                         negotiation skills along with ninja task management and
                         awesome task prioritization skills.
                       </p>
-                      <h6 className="mt-5 mt-lg-6">Duties and Responsibilities:</h6>
+                      <h6 className="mt-5 mt-lg-6">
+                        Duties and Responsibilities:
+                      </h6>
                       <ul className="mt-5 d-flex gap-3 flex-column">
                         <li className="d-flex align-items-center gap-3">
-                          <i className="ti ti-check"></i>Act as the primary contact
-                          between partners and Tradez.
+                          <i className="ti ti-check"></i>Act as the primary
+                          contact between partners and Tradez.
                         </li>
                         <li className="d-flex align-items-center gap-3">
                           <i className="ti ti-check"></i>Search, attract, and
@@ -59,8 +61,8 @@ const FAQ = () => {
                       <h6 className="mt-5 mt-lg-6">Benefits</h6>
                       <ul className="mt-5 d-flex gap-3 flex-column">
                         <li className="d-flex align-items-center gap-3">
-                          <i className="ti ti-check"></i>Paid 21 days holidays per
-                          year
+                          <i className="ti ti-check"></i>Paid 21 days holidays
+                          per year
                         </li>
                         <li className="d-flex align-items-center gap-3">
                           <i className="ti ti-check"></i>Continuous personal
@@ -96,11 +98,13 @@ const FAQ = () => {
                         negotiation skills along with ninja task management and
                         awesome task prioritization skills.
                       </p>
-                      <h6 className="mt-5 mt-lg-6">Duties and Responsibilities:</h6>
+                      <h6 className="mt-5 mt-lg-6">
+                        Duties and Responsibilities:
+                      </h6>
                       <ul className="mt-5 d-flex gap-3 flex-column">
                         <li className="d-flex align-items-center gap-3">
-                          <i className="ti ti-check"></i>Act as the primary contact
-                          between partners and Tradez.
+                          <i className="ti ti-check"></i>Act as the primary
+                          contact between partners and Tradez.
                         </li>
                         <li className="d-flex align-items-center gap-3">
                           <i className="ti ti-check"></i>Search, attract, and
@@ -118,8 +122,8 @@ const FAQ = () => {
                       <h6 className="mt-5 mt-lg-6">Benefits</h6>
                       <ul className="mt-5 d-flex gap-3 flex-column">
                         <li className="d-flex align-items-center gap-3">
-                          <i className="ti ti-check"></i>Paid 21 days holidays per
-                          year
+                          <i className="ti ti-check"></i>Paid 21 days holidays
+                          per year
                         </li>
                         <li className="d-flex align-items-center gap-3">
                           <i className="ti ti-check"></i>Continuous personal
@@ -161,11 +165,13 @@ const FAQ = () => {
                         negotiation skills along with ninja task management and
                         awesome task prioritization skills.
                       </p>
-                      <h6 className="mt-5 mt-lg-6">Duties and Responsibilities:</h6>
+                      <h6 className="mt-5 mt-lg-6">
+                        Duties and Responsibilities:
+                      </h6>
                       <ul className="mt-5 d-flex gap-3 flex-column">
                         <li className="d-flex align-items-center gap-3">
-                          <i className="ti ti-check"></i>Act as the primary contact
-                          between partners and Tradez.
+                          <i className="ti ti-check"></i>Act as the primary
+                          contact between partners and Tradez.
                         </li>
                         <li className="d-flex align-items-center gap-3">
                           <i className="ti ti-check"></i>Search, attract, and
@@ -183,8 +189,8 @@ const FAQ = () => {
                       <h6 className="mt-5 mt-lg-6">Benefits</h6>
                       <ul className="mt-5 d-flex gap-3 flex-column">
                         <li className="d-flex align-items-center gap-3">
-                          <i className="ti ti-check"></i>Paid 21 days holidays per
-                          year
+                          <i className="ti ti-check"></i>Paid 21 days holidays
+                          per year
                         </li>
                         <li className="d-flex align-items-center gap-3">
                           <i className="ti ti-check"></i>Continuous personal
@@ -220,11 +226,13 @@ const FAQ = () => {
                         negotiation skills along with ninja task management and
                         awesome task prioritization skills.
                       </p>
-                      <h6 className="mt-5 mt-lg-6">Duties and Responsibilities:</h6>
+                      <h6 className="mt-5 mt-lg-6">
+                        Duties and Responsibilities:
+                      </h6>
                       <ul className="mt-5 d-flex gap-3 flex-column">
                         <li className="d-flex align-items-center gap-3">
-                          <i className="ti ti-check"></i>Act as the primary contact
-                          between partners and Tradez.
+                          <i className="ti ti-check"></i>Act as the primary
+                          contact between partners and Tradez.
                         </li>
                         <li className="d-flex align-items-center gap-3">
                           <i className="ti ti-check"></i>Search, attract, and
@@ -242,8 +250,8 @@ const FAQ = () => {
                       <h6 className="mt-5 mt-lg-6">Benefits</h6>
                       <ul className="mt-5 d-flex gap-3 flex-column">
                         <li className="d-flex align-items-center gap-3">
-                          <i className="ti ti-check"></i>Paid 21 days holidays per
-                          year
+                          <i className="ti ti-check"></i>Paid 21 days holidays
+                          per year
                         </li>
                         <li className="d-flex align-items-center gap-3">
                           <i className="ti ti-check"></i>Continuous personal
