@@ -6,8 +6,8 @@ import {
   Footer,
   Header,
   Team,
-} from "../Components/index";
-import Loader from "../Components/Global/Loader";
+} from "../components/index";
+import Loader from "../components/Global/Loader";
 ///IMPORTING CONTRCT DATA
 import { VOTING_DAPP_CONTEXT } from "../context/context";
 

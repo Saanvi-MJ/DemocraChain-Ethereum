@@ -6,7 +6,7 @@ import {
   Footer,
   Header,
   RoadMap,
-} from "../Components/index";
+} from "../components/index";
 const roadmap = () => {
   return (
     <>

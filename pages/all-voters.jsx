@@ -6,7 +6,7 @@ import {
   Footer,
   Header,
   Team,
-} from "../Components/index";
+} from "../components/index";
 //IMPORTING CONTRCT DATA
 import { VOTING_DAPP_CONTEXT } from "../context/context";
 

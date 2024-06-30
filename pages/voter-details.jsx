@@ -7,26 +7,18 @@ import {
   Footer,
   Header,
   TeamDetail,
-} from "../Components/index";
-import Loader from "../Components/Global/Loader";
+} from "../components/index";
+import Loader from "../components/Global/Loader";
 
 //IMPORTING CONTRCT DATA
 import { VOTING_DAPP_CONTEXT } from "../context/context";
 
 const voterDetails = () => {
   const router = useRouter();
-  //VOTER ADDRESS
-  const [currentAddress, setCurrentAddress] = useState();
-  const zeroAddress = "0x0000000000000000000000000000000000000000";
   const [candidate, setCandidate] = useState();
 
   const {
-    notifySuccess,
-    notifyError,
-    setLoader,
     loader,
-    VOTING_DAPP,
-    checkIfWalletIsConnected,
     GET_SINGLE_VOTER,
     APPROVE_VOTER,
     address,

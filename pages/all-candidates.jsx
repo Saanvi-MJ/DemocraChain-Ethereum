@@ -6,9 +6,8 @@ import {
   Footer,
   Header,
   Team,
-} from "../Components/index";
-import Loader from "../Components/Global/Loader";
-//IMPORTING CONTRCT DATA
+} from "../components/index";
+import Loader from "../components/Global/Loader";
 import { VOTING_DAPP_CONTEXT } from "../context/context";
 
 const registerCandidate = () => {
@@ -18,15 +17,10 @@ const registerCandidate = () => {
   const [user, setUser] = useState();
 
   const {
-    notifySuccess,
-    notifyError,
-    setLoader,
     loader,
-    VOTING_DAPP,
     GET_REGISTER_CANDIDATES,
     GIVE_VOTE,
     checkVote,
-    ALL_VOTERS_VOTED,
     INITIAL_CONTRACT_DATA,
     GET_SINGLE_VOTER,
     address,
@@ -37,8 +31,6 @@ const registerCandidate = () => {
     const fetchData = async () => {
       const items = await GET_REGISTER_CANDIDATES();
       setCandidates(items);
-
-      const allVotedVoter = await ALL_VOTERS_VOTED();
 
       const votingStatus = await INITIAL_CONTRACT_DATA();
       setVotingTime(votingStatus);

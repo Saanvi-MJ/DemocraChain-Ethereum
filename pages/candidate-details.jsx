@@ -7,8 +7,8 @@ import {
   Footer,
   Header,
   TeamDetail,
-} from "../Components/index";
-import Loader from "../Components/Global/Loader";
+} from "../components/index";
+import Loader from "../components/Global/Loader";
 
 //IMPORTING CONTRCT DATA
 import { VOTING_DAPP_CONTEXT } from "../context/context";
@@ -22,14 +22,9 @@ const candidateDetails = () => {
   const [currentVotingTime, setCurrentVotingTime] = useState();
 
   const {
-    notifySuccess,
-    notifyError,
-    setLoader,
     loader,
     address,
-    VOTING_DAPP,
     checkIfWalletIsConnected,
-    REGISTER_VOTER,
     GET_SINGLE_CANDIDATE,
     APPROVE_CANDIDATE,
     GIVE_VOTE,

@@ -4,17 +4,16 @@ import {
   Cursor,
   Preloader,
   ScrollToTop,
-} from "../Components/index";
+} from "../components/index";
 
-import Input from "../Components/Global/Input";
-import Upload from "../Components/Global/Upload";
-import UploadImg from "../Components/Global/UploadImg";
-import Preview from "../Components/Global/Preview";
-import PreviewImg from "../Components/Global/PreviewImg";
-import Loader from "../Components/Global/Loader";
-import PopUp from "../Components/Global/PopUp";
+import Input from "../components/Global/Input";
+import Upload from "../components/Global/Upload";
+import UploadImg from "../components/Global/UploadImg";
+import Preview from "../components/Global/Preview";
+import PreviewImg from "../components/Global/PreviewImg";
+import Loader from "../components/Global/Loader";
+import PopUp from "../components/Global/PopUp";
 
-//IMPORTING CONTRCT DATA
 import { VOTING_DAPP_CONTEXT } from "../context/context";
 
 const voter = () => {
@@ -28,12 +27,10 @@ const voter = () => {
     GET_SINGLE_VOTER,
   } = useContext(VOTING_DAPP_CONTEXT);
 
-  //VOTER ADDRESS
-  const [currentAddress, setCurrentAddress] = useState();
+  const [_, setCurrentAddress] = useState();
   const zeroAddress = "0x0000000000000000000000000000000000000000";
   const [candidate, setCandidate] = useState();
 
-  //FILES
   const [pdf, setPdf] = useState(null);
   const [image, setImage] = useState(null);
 

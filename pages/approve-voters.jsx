@@ -6,23 +6,15 @@ import {
   Footer,
   Header,
   Team,
-} from "../Components/index";
+} from "../components/index";
 //IMPORTING CONTRCT DATA
 import { VOTING_DAPP_CONTEXT } from "../context/context";
 
 const registerVoters = () => {
   const [candidates, setCandidates] = useState();
 
-  const {
-    notifySuccess,
-    notifyError,
-    setLoader,
-    loader,
-    VOTING_DAPP,
-    GET_REGISTER_VOTERS,
-  } = useContext(VOTING_DAPP_CONTEXT);
+  const { GET_REGISTER_VOTERS } = useContext(VOTING_DAPP_CONTEXT);
 
-  // Function to filter users by status
   function filterUsersByStatus(users, status) {
     return users?.filter((user) => user.status === status);
   }

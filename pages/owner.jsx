@@ -7,15 +7,15 @@ import {
   Footer,
   Header,
   RoadMap,
-} from "../Components/index";
+} from "../components/index";
 
-import Input from "../Components/Global/Input";
-import Upload from "../Components/Global/Upload";
-import UploadImg from "../Components/Global/UploadImg";
-import Preview from "../Components/Global/Preview";
-import PreviewImg from "../Components/Global/PreviewImg";
-import Loader from "../Components/Global/Loader";
-import PopUp from "../Components/Global/PopUp";
+import Input from "../components/Global/Input";
+import Upload from "../components/Global/Upload";
+import UploadImg from "../components/Global/UploadImg";
+import Preview from "../components/Global/Preview";
+import PreviewImg from "../components/Global/PreviewImg";
+import Loader from "../components/Global/Loader";
+import PopUp from "../components/Global/PopUp";
 
 //IMPORTING CONTRCT DATA
 import { VOTING_DAPP_CONTEXT } from "../context/context";

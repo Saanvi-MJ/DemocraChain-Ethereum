@@ -6,7 +6,7 @@ import {
   Footer,
   Header,
   About,
-} from "../Components/index";
+} from "../components/index";
 const about = () => {
   return (
     <>

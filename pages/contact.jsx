@@ -6,7 +6,7 @@ import {
   Footer,
   Header,
   Contact,
-} from "../Components/index";
+} from "../components/index";
 
 const contact = () => {
   return (

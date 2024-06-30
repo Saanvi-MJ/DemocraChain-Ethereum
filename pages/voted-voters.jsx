@@ -6,22 +6,14 @@ import {
   Footer,
   Header,
   Team,
-} from "../Components/index";
+} from "../components/index";
 //IMPORTING CONTRCT DATA
 import { VOTING_DAPP_CONTEXT } from "../context/context";
 
 const allVotersVoted = () => {
   const [candidates, setCandidates] = useState();
 
-  const {
-    notifySuccess,
-    notifyError,
-    setLoader,
-    loader,
-    VOTING_DAPP,
-    GET_REGISTER_VOTERS,
-    ALL_VOTERS_VOTED,
-  } = useContext(VOTING_DAPP_CONTEXT);
+  const { ALL_VOTERS_VOTED } = useContext(VOTING_DAPP_CONTEXT);
 
   useEffect(() => {
     const fetchData = async () => {

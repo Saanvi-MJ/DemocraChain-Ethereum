@@ -8,15 +8,15 @@ import {
   Footer,
   Header,
   RoadMap,
-} from "../Components/index";
+} from "../components/index";
 
-import Input from "../Components/Global/Input";
-import Upload from "../Components/Global/Upload";
-import Preview from "../Components/Global/Preview";
-import UploadImg from "../Components/Global/UploadImg";
-import PreviewImg from "../Components/Global/PreviewImg";
-import Loader from "../Components/Global/Loader";
-import PopUp from "../Components/Global/PopUp";
+import Input from "../components/Global/Input";
+import Upload from "../components/Global/Upload";
+import Preview from "../components/Global/Preview";
+import UploadImg from "../components/Global/UploadImg";
+import PreviewImg from "../components/Global/PreviewImg";
+import Loader from "../components/Global/Loader";
+import PopUp from "../components/Global/PopUp";
 
 //IMPORTING CONTRCT DATA
 import { VOTING_DAPP_CONTEXT } from "../context/context";
@@ -27,14 +27,13 @@ const signup = () => {
     notifyError,
     setLoader,
     loader,
-    VOTING_DAPP,
     REGISTER_CANDIDATE,
     GET_SINGLE_CANDIDATE,
     checkIfWalletIsConnected,
   } = useContext(VOTING_DAPP_CONTEXT);
 
   //CURRENT ADDRESS
-  const [currentAddress, setCurrentAddress] = useState();
+  const [_, setCurrentAddress] = useState();
   const zeroAddress = "0x0000000000000000000000000000000000000000";
   const [candidate, setCandidate] = useState();
 

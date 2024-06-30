@@ -12,7 +12,7 @@ import {
   Blog,
   Provide,
   Vote,
-} from "../Components/index";
+} from "../components/index";
 
 //IMPORTING CONTRCT DATA
 import { VOTING_DAPP_CONTEXT } from "../context/context";
@@ -22,11 +22,7 @@ const index = () => {
   const [higest, setHigest] = useState();
 
   const {
-    connectWallet,
-    address,
-    setAddress,
     HIGHEST_VOTED_CANDIDATE,
-    WINNER,
     INITIAL_CONTRACT_DATA,
   } = useContext(VOTING_DAPP_CONTEXT);
 
