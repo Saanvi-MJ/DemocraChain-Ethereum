@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
+import Link from "next/link";
 
 import { Cursor, Preloader, ScrollToTop } from "../components/index";
 
@@ -10,7 +11,6 @@ import PreviewImg from "../components/Global/PreviewImg";
 import Loader from "../components/Global/Loader";
 
 import { VOTING_DAPP_CONTEXT } from "../context/context";
-import Link from "next/link";
 
 const voter = () => {
   const {
