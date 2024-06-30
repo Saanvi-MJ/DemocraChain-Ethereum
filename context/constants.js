@@ -5,9 +5,9 @@ import axios from "axios";
 //IMPORT CONTRACT ABI
 import votingOrganization from "./VotingOrganization.json";
 
-export const OWNER_ADDRESS = process.env.OWNER_ADDRESS;
+export const OWNER_ADDRESS = process.env.NEXT_PUBLIC_OWNER_ADDRESS;
 
-export const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS;
+export const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS;
 export const CONTRACT_ABI = votingOrganization.abi;
 
 //NETWORK

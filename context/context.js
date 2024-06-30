@@ -98,8 +98,8 @@ export const VOTER_DAPP_PROVIDER = ({ children }) => {
         url: "https://api.pinata.cloud/pinning/pinJSONToIPFS",
         data: data,
         headers: {
-          pinata_api_key: process.env.PINATA_KEY,
-          pinata_secret_api_key: process.env.PINATA_SECRET,
+          pinata_api_key: process.env.NEXT_PUBLIC_PINATA_KEY,
+          pinata_secret_api_key: process.env.NEXT_PUBLIC_PINATA_SECRET,
           "Content-Type": "application/json",
         },
       });
@@ -184,8 +184,8 @@ export const VOTER_DAPP_PROVIDER = ({ children }) => {
         url: "https://api.pinata.cloud/pinning/pinJSONToIPFS",
         data: data,
         headers: {
-          pinata_api_key: process.env.PINATA_KEY,
-          pinata_secret_api_key: process.env.PINATA_SECRET,
+          pinata_api_key: process.env.NEXT_PUBLIC_PINATA_KEY,
+          pinata_secret_api_key: process.env.NEXT_PUBLIC_PINATA_SECRET,
           "Content-Type": "application/json",
         },
       });
@@ -392,8 +392,8 @@ export const VOTER_DAPP_PROVIDER = ({ children }) => {
         url: "https://api.pinata.cloud/pinning/pinJSONToIPFS",
         data: data,
         headers: {
-          pinata_api_key: process.env.PINATA_KEY,
-          pinata_secret_api_key: process.env.PINATA_SECRET,
+          pinata_api_key: process.env.NEXT_PUBLIC_PINATA_KEY,
+          pinata_secret_api_key: process.env.NEXT_PUBLIC_PINATA_SECRET,
           "Content-Type": "application/json",
         },
       });
@@ -485,8 +485,8 @@ export const VOTER_DAPP_PROVIDER = ({ children }) => {
         url: "https://api.pinata.cloud/pinning/pinJSONToIPFS",
         data: data,
         headers: {
-          pinata_api_key: process.env.PINATA_KEY,
-          pinata_secret_api_key: process.env.PINATA_SECRET,
+          pinata_api_key: process.env.NEXT_PUBLIC_PINATA_KEY,
+          pinata_secret_api_key: process.env.NEXT_PUBLIC_PINATA_SECRET,
           "Content-Type": "application/json",
         },
       });
