@@ -114,23 +114,24 @@ const voter = () => {
                           })
                         }
                       />
-                      <div className="  mt-lg-8">
+                      <div>
                         <button
-                          className="cmn-btn py-3 px-5 px-lg-6 mt-7 mt-lg-8 w-100 d-center"
+                          className="cmn-btn py-3 px-5 px-lg-6 w-100 d-center"
                           onClick={() => SET_VOTING_PREIOD(voteTime)}
                         >
                           Set Voting Period
                         </button>
                       </div>
+                      <div className="mt-lg-8"></div>
                       <Input
                         name={"New Address"}
                         placeholder={"new address"}
                         type={"text"}
                         handleClick={(e) => setChangeOwner(e.target.value)}
                       />
-                      <div className="  mt-lg-8">
+                      <div>
                         <button
-                          className="cmn-btn py-3 px-5 px-lg-6 mt-7 mt-lg-8 w-100 d-center"
+                          className="cmn-btn py-3 px-5 px-lg-6 w-100 d-center"
                           onClick={() => CHANGE_OWNER(changeOwner)}
                         >
                           Change Owner
@@ -138,7 +139,7 @@ const voter = () => {
                       </div>
                     </div>
 
-                    <div className=" mt-7 mt-lg-8">
+                    <div className=" mt-7 mt-lg-16">
                       <button
                         className="cmn-btn py-3 px-5 px-lg-6 mt-7 mt-lg-8 w-100 d-center"
                         onClick={() => RESET_CONTRACT()}

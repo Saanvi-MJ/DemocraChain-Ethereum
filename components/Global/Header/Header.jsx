@@ -82,26 +82,26 @@ const Header = () => {
             <ul className="navbar-nav gap-2 gap-lg-3 gap-xxl-8 align-self-center mx-auto mt-4 mt-lg-0">
               <li className="dropdown show-dropdown">
                 <Link href="/">
-                  <a className="dropdown-nav active">Home</a>
+                  <a className="dropdown-nav header-hover-link">Home</a>
                 </Link>
               </li>
               <li className="dropdown show-dropdown">
                 <button
                   type="button"
                   aria-label="Navbar Dropdown Button"
-                  className="dropdown-nav"
+                  className="dropdown-nav header-hover-link"
                 >
                   Candidate
                 </button>
                 <ul className="dropdown-menu">
                   <li>
                     <Link href="/register-candidate">
-                      <a className="dropdown-item">All Candidate</a>
+                      <a className="dropdown-item header-hover-link">All Candidates</a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/approve-candidate">
-                      <a className="dropdown-item">Approve Candidate</a>
+                      <a className="dropdown-item header-hover-link">Approved Candidates</a>
                     </Link>
                   </li>
                 </ul>
@@ -110,32 +110,32 @@ const Header = () => {
                 <button
                   type="button"
                   aria-label="Navbar Dropdown Button"
-                  className="dropdown-nav"
+                  className="dropdown-nav header-hover-link"
                 >
                   Voter
                 </button>
                 <ul className="dropdown-menu">
                   <li>
                     <Link href="/register-voter">
-                      <a className="dropdown-item">All Voters</a>
+                      <a className="dropdown-item header-hover-link">All Voters</a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/approve-voter">
-                      <a className="dropdown-item">Approve Voters</a>
+                      <a className="dropdown-item header-hover-link">Approve Voters</a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/all-voters-voted">
-                      <a className="dropdown-item">All Voted Voters</a>
+                      <a className="dropdown-item header-hover-link">All Voted Voters</a>
                     </Link>
                   </li>
                 </ul>
               </li>
-              {address == OWNER_ADDRESS?.toLowerCase() && (
+              {address === OWNER_ADDRESS?.toLowerCase() && (
                 <li>
                   <Link href="/owner">
-                    <a className="dropdown-item">Owner</a>
+                    <a className="dropdown-item header-hover-link">Owner</a>
                   </Link>
                 </li>
               )}
@@ -143,44 +143,44 @@ const Header = () => {
                 <button
                   type="button"
                   aria-label="Navbar Dropdown Button"
-                  className="dropdown-nav"
+                  className="dropdown-nav header-hover-link"
                 >
                   Resources
                 </button>
                 <ul className="dropdown-menu">
                   <li>
                     <Link href="/about">
-                      <a className="dropdown-item">About Us</a>
+                      <a className="dropdown-item header-hover-link">About Us</a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/legal-docs">
-                      <a className="dropdown-item">Legal Docs</a>
+                      <a className="dropdown-item header-hover-link">Legal Docs</a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/contact">
-                      <a className="dropdown-item">Contact Us</a>
+                      <a className="dropdown-item header-hover-link">Contact Us</a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/roadmap">
-                      <a className="dropdown-item">Roadmap</a>
+                      <a className="dropdown-item header-hover-link">Roadmap</a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/support">
-                      <a className="dropdown-item">Support</a>
+                      <a className="dropdown-item header-hover-link">Support</a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/terms-conditions">
-                      <a className="dropdown-item">Terms & Conditions</a>
+                      <a className="dropdown-item header-hover-link">Terms & Conditions</a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/privacy-policy">
-                      <a className="dropdown-item">Privacy Policy</a>
+                      <a className="dropdown-item header-hover-link">Privacy Policy</a>
                     </Link>
                   </li>
                 </ul>

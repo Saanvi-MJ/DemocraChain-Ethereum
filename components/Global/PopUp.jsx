@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const PopUp = ({ candidate }) => {
@@ -17,7 +18,7 @@ const PopUp = ({ candidate }) => {
             />
           </span>
           <p className="custom-alert">
-            Welcome {candidate?._name}! <a href="/">X</a>
+            Welcome {candidate?._name}! <Link href="/">X</Link>
           </p>
         </div>
 
@@ -31,14 +32,16 @@ const PopUp = ({ candidate }) => {
           Thank you for being a part of our community!
         </p>
         <div className="custom-actions">
-          <a className="custom-read" href="">
-            Status:{" "}
-            {candidate?.status == 0
-              ? "Pending"
-              : candidate?.status == 1
-              ? "Approved"
-              : "Rejected"}
-          </a>
+          <Link href="/">
+            <a className="custom-read">
+              Status:{" "}
+              {candidate?.status == 0
+                ? "Pending"
+                : candidate?.status == 1
+                ? "Approved"
+                : "Rejected"}
+            </a>
+          </Link>
         </div>
       </div>
     </div>

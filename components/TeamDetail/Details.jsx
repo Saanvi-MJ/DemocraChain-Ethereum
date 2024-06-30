@@ -142,7 +142,7 @@ const Details = ({
                 )}
 
                 <p className="mb-4 mt-10">
-                  <strong>Notic:</strong> {candidate?.message}
+                  <strong>Notice:</strong> {candidate?.message}
                 </p>
                 {address == candidate?.address.toLowerCase() &&
                 candidate?.status == 0 ? (
@@ -155,7 +155,7 @@ const Details = ({
                           : "/update-voter"
                       }
                     >
-                      Updata Profile
+                      Update Profile
                     </a>
                   </div>
                 ) : address == candidate?.address.toLowerCase() &&
@@ -169,7 +169,7 @@ const Details = ({
                           : "/update-voter"
                       }
                     >
-                      Updata Profile
+                      Update Profile
                     </a>
                   </div>
                 ) : (
@@ -186,7 +186,10 @@ const Details = ({
                         placeholder={"message"}
                       ></textarea>
                     </div>
-                    <div className="custom-actions">
+                    <div
+                      style={{ cursor: "pointer" }}
+                      className="custom-actions"
+                    >
                       <a
                         className="custom-read"
                         onClick={() =>
@@ -196,7 +199,10 @@ const Details = ({
                         Approve
                       </a>
                     </div>
-                    <div className="custom-actions">
+                    <div
+                      style={{ cursor: "pointer" }}
+                      className="custom-actions"
+                    >
                       <a
                         className="custom-read"
                         onClick={() =>

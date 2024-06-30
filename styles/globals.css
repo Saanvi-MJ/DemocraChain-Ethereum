@@ -76,7 +76,7 @@
 
 .custom-loader {
   border: 16px solid #21212138; /* Light grey */
-  border-top: 16px solid #00ff00; /* Blue */
+  border-top: 16px solid #f73859; /* Blue */
   border-radius: 50%;
   width: 120px;
   height: 120px;
@@ -127,7 +127,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 9999px;
-  background-color: #9bd953;
+  background-color: #f73859;
   padding: 0.5rem;
   color: rgba(255, 255, 255, 1);
 }
@@ -168,13 +168,13 @@
 }
 
 .custom-read {
-  background-color: #9bd953;
-  color: rgba(255, 255, 255, 1);
+  background-color: #f73859;
+  color: #fff6e9;
 }
 
 .custom-read:hover {
-  background-color: #000000;
-  color: rgba(255, 255, 255, 1);
+  background-color: #fff6e9;
+  color: #f73859;
 }
 
 .custom-mark-as-read {
@@ -197,6 +197,14 @@
 .new-custom-top {
   position: absolute;
   top: -18rem;
-  color: #9bd953;
+  color: #f73859;
 }
 /* //END MEMBER POSITION */
+
+div.team__card:hover .new-custom-top > strong {
+  color: #eee6e9;
+}
+
+a.header-hover-link:hover {
+  color: #f73859 !important;
+}

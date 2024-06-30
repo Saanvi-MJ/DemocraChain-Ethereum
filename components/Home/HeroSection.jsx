@@ -29,7 +29,7 @@ const HeroSection = ({ initialData, higest }) => {
                   Decentralized Voting
                 </span>
                 <h1 className="display-two nb4-xxl-color mb-5 mb-lg-6">
-                  Vote For Prime Minister
+                  Vote For your Favorite Candidate
                 </h1>
                 <p className="fs-six-up fw_500 nb4-xxl-color">
                   Now you can ellected your first prime minister through the
@@ -59,7 +59,7 @@ const HeroSection = ({ initialData, higest }) => {
                       className="cmn-btn link link-xxl-color fs-five  gap-2 gap-lg-3 align-items-center "
                     >
                       <i className="ti ti-arrow-narrow-right fs-four"></i>
-                      Current Higest Voter
+                      Current Highest Voter
                     </a>
                   ) : (
                     <a
@@ -88,25 +88,25 @@ const HeroSection = ({ initialData, higest }) => {
               <span className="d-center s1-bg p-3 p-lg-4 rounded-circle">
                 <i className="ti ti-tools fs-three nb4-color"></i>
               </span>
-              <h4 className="nw1-color">Register as Voter</h4>
+              <h4 className="s1-color">Register as Voter</h4>
             </li>
             <li className="d-flex gap-3 align-items-center">
               <span className="d-center s1-bg p-3 p-lg-4 rounded-circle">
                 <i className="ti ti-trending-up fs-three nb4-color"></i>
               </span>
-              <h4 className="nw1-color"> Candidate</h4>
+              <h4 className="s1-color"> Candidate</h4>
             </li>
             <li className="d-flex gap-3 align-items-center">
               <span className="d-center s1-bg p-3 p-lg-4 rounded-circle">
                 <i className="ti ti-broadcast fs-three nb4-color"></i>
               </span>
-              <h4 className="nw1-color">Get Approvel</h4>
+              <h4 className="s1-color">Get Approvel</h4>
             </li>
             <li className="d-flex gap-3 align-items-center">
               <span className="d-center s1-bg p-3 p-lg-4 rounded-circle">
                 <i className="ti ti-percentage fs-three nb4-color"></i>
               </span>
-              <h4 className="nw1-color">Give Vote</h4>
+              <h4 className="s1-color">Give Vote</h4>
             </li>
           </ul>
         </div>

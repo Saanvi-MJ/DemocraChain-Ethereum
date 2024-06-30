@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Member = ({
@@ -24,29 +25,29 @@ const Member = ({
                   <img src={item?.image} alt="Image" className="w-100" />
                 </div>
                 <div className="team__content pseudo_element_after transition text-center py-6 py-lg-7 py-xxl-8 px-4 px-lg-5 px-xxl-6">
-                  <a
+                  <Link
                     href={
                       path == "candidate"
                         ? `/candidate-details?address=${item?.address} `
                         : `/voter-details?address=${item?.address} `
                     }
                   >
-                    <h5 className="team__title d-center pb-4 mb-4 pseudo_element_after">
-                      {item?._name}{" "}
-                    </h5>
-                  </a>
+                    <a>
+                      <h5 className="team__title d-center pb-4 mb-4 pseudo_element_after">
+                        {item?._name}{" "}
+                      </h5>
+                    </a>
+                  </Link>
                   <p className="new-custom-top">
                     <strong>
                       {item?.status == 0
                         ? "Pending"
                         : item?.status == 1
-                        ? "Approve"
+                        ? "Approved"
                         : "Rejected"}
                     </strong>
                   </p>
-                  <p className="mb-3">
-                    When I first started trading But with time and experience.
-                  </p>
+
                   {path == "candidate" &&
                     item?.status == 1 &&
                     user?.status == 1 &&
