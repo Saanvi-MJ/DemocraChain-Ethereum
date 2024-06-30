@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from "react";
-import Web3Modal from "web3modal";
-import { ethers } from "ethers";
 import { useRouter } from "next/router";
 import axios from "axios";
 import toast from "react-hot-toast";
 
 //INTERNAL  IMPORT
 import {
-  handleNetworkSwitch,
   checkIfWalletIsConnected,
   connectWallet,
   VOTING_CONTRACT,
@@ -21,6 +18,7 @@ export const VOTER_DAPP_PROVIDER = ({ children }) => {
   const currency = "MATIC";
   const network = "Polygon";
 
+  const router = useRouter();
   const [loader, setLoader] = useState(false);
   const [address, setAddress] = useState();
   const [checkVote, setCheckVote] = useState(false);
@@ -113,7 +111,7 @@ export const VOTER_DAPP_PROVIDER = ({ children }) => {
 
       notifySuccess("Successfully Registered Candidate");
       setLoader(false);
-      window.location.href = "/register-candidate";
+      router.push("/all-candidates");
     } catch (error) {
       setLoader(false);
       notifySuccess(
@@ -199,7 +197,7 @@ export const VOTER_DAPP_PROVIDER = ({ children }) => {
 
       notifySuccess("Successfully Registered Candidate");
       setLoader(false);
-      window.location.href = "/register-voter";
+      router.push("/all-voters");
     } catch (error) {
       setLoader(false);
       notifySuccess(
@@ -222,7 +220,7 @@ export const VOTER_DAPP_PROVIDER = ({ children }) => {
       await transaction.wait();
       setLoader(false);
       notifySuccess("Successfully approve Candidate");
-      window.location.href = "/approve-candidate";
+      router.push("/approve-candidates");
     } catch (error) {
       setLoader(false);
       notifySuccess("approve failed, kindly connect to ellection commission");
@@ -243,7 +241,7 @@ export const VOTER_DAPP_PROVIDER = ({ children }) => {
       await transaction.wait();
       setLoader(false);
       notifySuccess("Successfully aapprove voter");
-      window.location.href = "/approve-voter";
+      router.push("/approve-voters");
     } catch (error) {
       setLoader(false);
       notifySuccess("approving failed, kindly connect to ellection commission");
@@ -264,7 +262,7 @@ export const VOTER_DAPP_PROVIDER = ({ children }) => {
       await transaction.wait();
       setLoader(false);
       notifySuccess(" Candidate Rejected");
-      window.location.href = "/register-candidate";
+      router.push("/all-candidates");
     } catch (error) {
       setLoader(false);
       notifySuccess("approve failed, kindly connect to ellection commission");
@@ -286,7 +284,7 @@ export const VOTER_DAPP_PROVIDER = ({ children }) => {
       await transaction.wait();
       setLoader(false);
       notifySuccess("Successfully Rejected");
-      window.location.href = "/register-voter";
+      router.push("/all-voters");
     } catch (error) {
       setLoader(false);
       notifySuccess("approving failed, kindly connect to ellection commission");
@@ -407,7 +405,7 @@ export const VOTER_DAPP_PROVIDER = ({ children }) => {
 
       notifySuccess("Successfully updated voter");
       setLoader(false);
-      window.location.href = "/register-voter";
+      router.push("/all-voters");
     } catch (error) {
       setLoader(false);
       notifySuccess("Update failed, kindly connect to ellection commission");
@@ -500,7 +498,7 @@ export const VOTER_DAPP_PROVIDER = ({ children }) => {
 
       notifySuccess("Successfully Updated Candidate");
       setLoader(false);
-      window.location.href = "/register-candidate";
+      router.push("/all-candidates");
     } catch (error) {
       setLoader(false);
       notifySuccess("Update failed, kindly connect to ellection commission");
@@ -562,7 +560,7 @@ export const VOTER_DAPP_PROVIDER = ({ children }) => {
       await transaction.wait();
       setLoader(false);
       notifySuccess("Successfully voted ");
-      window.location.href = "/approve-candidate";
+      router.push("/approve-candidates");
     } catch (error) {
       setLoader(false);
       notifySuccess("vote failed, kindly connect to ellection commission");
