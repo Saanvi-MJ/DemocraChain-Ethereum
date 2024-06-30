@@ -15,16 +15,11 @@ const Company = () => {
           <div className="col-sm-10 col-lg-6 col-xxl-5 order-2 order-lg-0">
             <div className="company-story__thumbs d-center">
               <img
-                src="assets/images/company_story.png"
+                src="assets/images/faq.png"
                 className="cus-rounded-1 w-100"
                 alt="Imgae"
               />
-              <a
-                href="https://www.youtube.com/watch?v=BHACKCNDMW8"
-                className="popup-video btn-popup-animation position-absolute d-center rounded-circle"
-              >
-                <i className="fa-solid fa-play fs-four"></i>
-              </a>
+             
             </div>
           </div>
           <div className="col-lg-6 col-xxl-7">
@@ -32,7 +27,7 @@ const Company = () => {
               <div className="col-xxl-6">
                 <div className="company-story__part">
                   <span className="heading p1-color fs-five">
-                    Our Company Story
+                    Our Team Story
                   </span>
                   <h3 className="mb-3 mt-5">What We Do</h3>
                   <p>
@@ -48,7 +43,7 @@ const Company = () => {
                       href="signup.html"
                       className="cmn-btn cmn-btn-circle d-center flex-column fw_500"
                     >
-                      <i className="ti ti-arrow-up-right fs-three"></i>
+                      <i className="ti ti-arrow-up-right fs-three" />
                       Start Now
                     </a>
                   </div>

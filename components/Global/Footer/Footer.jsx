@@ -139,7 +139,17 @@ const Footer = () => {
           <div className="col-12 border-top border-color opac-20 py-7 py-xxl-8">
             <div className="footer__copyright d-center gap-15 flex-wrap justify-content-md-between">
               <p className="fs-six order-2 order-md-0 text-center text-md-start">
-                Copyright ©<span className=""></span> @theblockchaincoders{" "}
+                The source code is available on{" "}
+                <a
+                  href="https://github.com/soorya-u/DemocraChain"
+                  style={{
+                    textDecoration: "underline",
+                    color: "#B6B6B6",
+                  }}
+                >
+                  GitHub
+                </a>
+                .
               </p>
               <ul className="social-area d-center gap-2 gap-md-3">
                 <li>

@@ -11,7 +11,6 @@ import {
   WhyVote,
   Blog,
   Provide,
-  Trust,
   Vote,
 } from "../Components/index";
 
@@ -54,7 +53,6 @@ const index = () => {
       <WhyVote />
       <Provide />
       <Vote />
-      {/* <Trust /> */}
       <Blog />
       <Footer />
     </>

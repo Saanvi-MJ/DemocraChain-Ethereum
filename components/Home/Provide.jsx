@@ -5,9 +5,10 @@ const Provide = () => {
     <section className="provide-world bg nb4-bg pt-120 pb-120  position-relative z-0">
       <div className="animation position-absolute top-0 left-0 w-100 h-100 z-n1 d-none d-md-flex">
         <img
-          src="assets/images/button.png"
+          src="assets/images/vector.png"
           alt="vector"
-          className="position-absolute pt-6 pt-xl-15 previewShapeRevX"
+          style={{ paddingLeft: "10rem" }}
+          className="position-absolute pt-6 ml-8 pt-xl-15 previewShapeRevX"
         />
       </div>
       <div className="container">
@@ -18,8 +19,8 @@ const Provide = () => {
                 We Provide World’s
               </span>
               <h3 className="mb-5 mb-lg-6">
-                Join a club of more than <span className="s1-color">480,000</span>{" "}
-                traders
+                Join a club of more than{" "}
+                <span className="s1-color">480,000</span> traders
               </h3>
               <p className="fs-six-up mx-ch mx-auto">
                 Trading is the art and science of buying and selling financial
