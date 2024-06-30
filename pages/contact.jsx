@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Cursor,
-  Preloader,
   ScrollToTop,
   Footer,
   Header,
@@ -11,7 +10,6 @@ import {
 const contact = () => {
   return (
     <>
-      {/* <Preloader /> */}
       <ScrollToTop />
       <Cursor />
       <Header />

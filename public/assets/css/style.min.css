@@ -1644,7 +1644,7 @@ iframe {
   overflow: visible;
   display: flex;
   justify-content: center;
-  background: #263038;
+  background: #010101;
 }
 
 .loader {
@@ -2821,7 +2821,7 @@ iframe {
     height: 539px;
     border-radius: 539px;
     opacity: 0.35;
-    background: var(--Primary-colors, #F73859);
+    background: var(--Primary-colors, #f73859);
     filter: blur(200px);
     top: 12%;
     right: 6%;

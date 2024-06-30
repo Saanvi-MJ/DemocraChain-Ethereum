@@ -33,10 +33,10 @@ const signup = () => {
     checkIfWalletIsConnected,
   } = useContext(VOTING_DAPP_CONTEXT);
 
-  //CURRENT ADDRESS
   const [_, setCurrentAddress] = useState();
   const zeroAddress = "0x0000000000000000000000000000000000000000";
   const [candidate, setCandidate] = useState();
+  const [loading, setLoading] = useState(false);
 
   //FILES
   const [pdf, setPdf] = useState(null);
@@ -62,6 +62,7 @@ const signup = () => {
   });
 
   useEffect(() => {
+    setLoading(true);
     const fetchData = async () => {
       const address = await checkIfWalletIsConnected();
       if (address) {
@@ -72,12 +73,12 @@ const signup = () => {
       }
     };
 
-    fetchData();
+    fetchData().finally(() => setLoading(false));
   }, []);
 
   return (
     <>
-      {/* <Preloader /> */}
+      {loading && <Preloader />}
       <ScrollToTop />
       <Cursor />
       <section className="sign nb4-bg h-100 d-flex align-items-center position-relative z-0">

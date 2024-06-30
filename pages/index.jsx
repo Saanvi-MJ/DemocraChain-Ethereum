@@ -19,13 +19,13 @@ import { VOTING_DAPP_CONTEXT } from "../context/context";
 const index = () => {
   const [initialData, setInitialData] = useState();
   const [higest, setHigest] = useState();
+  const [loading, setLoading] = useState(false);
 
-  const {
-    HIGHEST_VOTED_CANDIDATE,
-    INITIAL_CONTRACT_DATA,
-  } = useContext(VOTING_DAPP_CONTEXT);
+  const { HIGHEST_VOTED_CANDIDATE, INITIAL_CONTRACT_DATA } =
+    useContext(VOTING_DAPP_CONTEXT);
 
   useEffect(() => {
+    setLoading(true);
     const fetchData = async () => {
       const items = await HIGHEST_VOTED_CANDIDATE();
       const initialData = await INITIAL_CONTRACT_DATA();
@@ -36,11 +36,11 @@ const index = () => {
       console.log(initialData);
     };
 
-    fetchData();
+    fetchData().finally(() => setLoading(false));
   }, []);
   return (
     <>
-      {/* <Preloader /> */}
+      {loading && <Preloader />}
       <ScrollToTop />
       <Cursor />
       <Header />

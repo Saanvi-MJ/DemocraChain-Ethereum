@@ -14,8 +14,10 @@ const allVotersVoted = () => {
   const [candidates, setCandidates] = useState();
 
   const { ALL_VOTERS_VOTED } = useContext(VOTING_DAPP_CONTEXT);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     const fetchData = async () => {
       const items = await ALL_VOTERS_VOTED();
 
@@ -24,11 +26,11 @@ const allVotersVoted = () => {
       setCandidates(items);
     };
 
-    fetchData();
+    fetchData().finally(() => setLoading(false));
   }, []);
   return (
     <>
-      {/* <Preloader /> */}
+      {loading && <Preloader />}
       <ScrollToTop />
       <Cursor />
       <Header />

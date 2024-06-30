@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import { useEffect, useState, useContext } from "react";
 import {
   Cursor,
   Preloader,
@@ -15,6 +15,7 @@ const registerVoters = () => {
   const [votingTime, setVotingTime] = useState();
   const [currentVotingTime, setCurrentVotingTime] = useState();
   const [user, setUser] = useState();
+  const [loading, setLoading] = useState(false);
 
   const {
     loader,
@@ -27,16 +28,14 @@ const registerVoters = () => {
     checkIfWalletIsConnected,
   } = useContext(VOTING_DAPP_CONTEXT);
 
-  /// Function to filter users by status
   function filterUsersByStatus(users, status) {
     return users?.filter((user) => user.status === status);
   }
 
   useEffect(() => {
+    setLoading(true);
     const fetchData = async () => {
       const items = await GET_REGISTER_CANDIDATES();
-
-      const allVotedVoter = await ALL_VOTERS_VOTED();
 
       const approvedUsers = filterUsersByStatus(items, 1);
       setCandidates(approvedUsers);
@@ -48,7 +47,6 @@ const registerVoters = () => {
 
       const nowInMilliseconds = Date.now();
 
-      // Convert milliseconds to seconds
       const nowInSeconds = Math.floor(nowInMilliseconds / 1000);
 
       setCurrentVotingTime(nowInSeconds);
@@ -61,11 +59,11 @@ const registerVoters = () => {
       }
     };
 
-    fetchData();
+    fetchData().finally(() => setLoading(false));
   }, []);
   return (
     <>
-      {/* <Preloader /> */}
+      {loading && <Preloader />}
       <ScrollToTop />
       <Cursor />
       <Header />

@@ -31,6 +31,7 @@ const signup = () => {
   //FILES
   const [pdf, setPdf] = useState(null);
   const [image, setImage] = useState(null);
+  cosnst[(loadConfig, setLoading)] = useState(false);
 
   //CANDIDATE DETAIL
   const [updateCandidate, setUpdateCandidate] = useState({
@@ -52,6 +53,7 @@ const signup = () => {
   });
 
   useEffect(() => {
+    setLoading(true);
     const fetchData = async () => {
       const address = await checkIfWalletIsConnected();
       if (address) {
@@ -62,12 +64,12 @@ const signup = () => {
       }
     };
 
-    fetchData();
+    fetchData().finally(() => setLoading(false));
   }, []);
 
   return (
     <>
-      {/* <Preloader /> */}
+      {loading && <Preloader />}
       <ScrollToTop />
       <Cursor />
       <section className="sign nb4-bg h-100 d-flex align-items-center position-relative z-0">

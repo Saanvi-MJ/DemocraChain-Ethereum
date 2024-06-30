@@ -10,15 +10,14 @@ import {
 } from "../components/index";
 import Loader from "../components/Global/Loader";
 
-//IMPORTING CONTRCT DATA
 import { VOTING_DAPP_CONTEXT } from "../context/context";
 
 const candidateDetails = () => {
   const router = useRouter();
-  //CANDIDATE ADDRESS
   const [candidate, setCandidate] = useState();
   const [user, setUser] = useState();
   const [votingTime, setVotingTime] = useState();
+  const [loading, setLoading] = useState(false);
   const [currentVotingTime, setCurrentVotingTime] = useState();
 
   const {
@@ -37,6 +36,7 @@ const candidateDetails = () => {
   } = useContext(VOTING_DAPP_CONTEXT);
 
   useEffect(() => {
+    setLoading(true);
     const fetchData = async () => {
       if (!router.isReady) return;
 
@@ -62,7 +62,7 @@ const candidateDetails = () => {
       }
     };
 
-    fetchData();
+    fetchData().finally(() => setLoading(false));
   }, [router.isReady]);
 
   const approveCandidate = async (address, message) => {
@@ -75,7 +75,7 @@ const candidateDetails = () => {
   //
   return (
     <>
-      {/* <Preloader /> */}
+      {loading && <Preloader />}
       <ScrollToTop />
       <Cursor />
       <Header />

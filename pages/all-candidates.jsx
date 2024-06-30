@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import { useEffect, useState, useContext } from "react";
 import {
   Cursor,
   Preloader,
@@ -15,6 +15,7 @@ const registerCandidate = () => {
   const [votingTime, setVotingTime] = useState();
   const [currentVotingTime, setCurrentVotingTime] = useState();
   const [user, setUser] = useState();
+  const [loading, setLoading] = useState(false);
 
   const {
     loader,
@@ -27,6 +28,7 @@ const registerCandidate = () => {
   } = useContext(VOTING_DAPP_CONTEXT);
 
   useEffect(() => {
+    setLoading(true);
     const fetchData = async () => {
       const items = await GET_REGISTER_CANDIDATES();
       setCandidates(items);
@@ -47,11 +49,11 @@ const registerCandidate = () => {
       }
     };
 
-    fetchData();
+    fetchData().finally(() => setLoading(false));
   }, []);
   return (
     <>
-      {/* <Preloader /> */}
+      {loading && <Preloader />}
       <ScrollToTop />
       <Cursor />
       <Header />

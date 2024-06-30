@@ -16,6 +16,7 @@ import { VOTING_DAPP_CONTEXT } from "../context/context";
 const voterDetails = () => {
   const router = useRouter();
   const [candidate, setCandidate] = useState();
+  const [loading, setLoading] = useState(false);
 
   const {
     loader,
@@ -27,6 +28,7 @@ const voterDetails = () => {
   } = useContext(VOTING_DAPP_CONTEXT);
 
   useEffect(() => {
+    setLoading(true);
     const fetchData = async () => {
       if (!router.isReady) return;
 
@@ -35,7 +37,7 @@ const voterDetails = () => {
       console.log(items);
     };
     //
-    fetchData();
+    fetchData().finally(() => setLoading(false));
   }, [router.isReady]);
 
   const approveVoter = async (address, message) => {
@@ -46,7 +48,7 @@ const voterDetails = () => {
   };
   return (
     <>
-      {/* <Preloader /> */}
+      {loading && <Preloader />}
       <ScrollToTop />
       <Cursor />
       <Header />

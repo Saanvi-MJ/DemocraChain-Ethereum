@@ -19,8 +19,8 @@ const voter = () => {
     SET_VOTING_PREIOD,
   } = useContext(VOTING_DAPP_CONTEXT);
 
-  ///VOTER ADDRESS
   const [currentAddress, setCurrentAddress] = useState();
+  const [loading, setLoading] = useState(false);
 
   const [voteTime, setVoteTime] = useState({
     startTime: "",
@@ -30,17 +30,18 @@ const voter = () => {
   const [changeOwner, setChangeOwner] = useState("");
 
   useEffect(() => {
+    setLoading(true);
     const fetchData = async () => {
       const address = await checkIfWalletIsConnected();
       setCurrentAddress(address);
     };
 
-    fetchData();
+    fetchData().finally(() => setLoading(false));
   }, []);
 
   return (
     <>
-      {/* <Preloader /> */}
+      {loading && <Preloader />}
       <ScrollToTop />
       <Cursor />
 

@@ -30,6 +30,7 @@ const voter = () => {
 
   const [pdf, setPdf] = useState(null);
   const [image, setImage] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   //VOTER DETAIL
   const [updateVoter, setUpdateVoter] = useState({
@@ -48,6 +49,7 @@ const voter = () => {
   });
   //
   useEffect(() => {
+    setLoading(true);
     const fetchData = async () => {
       const address = await checkIfWalletIsConnected();
       if (address) {
@@ -58,12 +60,12 @@ const voter = () => {
       }
     };
 
-    fetchData();
+    fetchData().finally(() => setLoading(false));
   }, []);
 
   return (
     <>
-      {/* <Preloader /> */}
+      {loading && <Preloader />}
       <ScrollToTop />
       <Cursor />
 
