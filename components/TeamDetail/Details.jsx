@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 //INTERNAL IMPORT
-import { shortenAddress } from "../../utils/utils";
+import { shortenAddress } from "../../utils";
 import Preview from "../Global/Preview";
 import Link from "next/link";
 
