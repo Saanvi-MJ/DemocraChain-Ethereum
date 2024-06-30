@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const HeroSection = ({ initialData, higest }) => {
@@ -47,28 +48,27 @@ const HeroSection = ({ initialData, higest }) => {
                 )}
 
                 <div className="d-inline-flex flex-wrap gap-4 gap-lg-10 align-items-center mt-8 mt-lg-10">
-                  <a
-                    href="/approve-candidate"
-                    className="cmn-btn alt-xxl-bg fs-five nb4-xxl-bg gap-2 gap-lg-3 align-items-center py-2 px-5 py-lg-3 px-lg-6"
-                  >
-                    All Candidates <i className="ti ti-trending-up"></i>
-                  </a>
+                  <Link href="/approve-candidates">
+                    <a className="cmn-btn alt-xxl-bg fs-five nb4-xxl-bg gap-2 gap-lg-3 align-items-center py-2 px-5 py-lg-3 px-lg-6">
+                      All Candidates <i className="ti ti-trending-up"></i>
+                    </a>
+                  </Link>
                   {higest ? (
-                    <a
+                    <Link
                       href={`/candidate-details?address=${higest?.address}`}
-                      className="cmn-btn link link-xxl-color fs-five  gap-2 gap-lg-3 align-items-center "
                     >
-                      <i className="ti ti-arrow-narrow-right fs-four"></i>
-                      Current Highest Voter
-                    </a>
+                      <a className="cmn-btn link link-xxl-color fs-five  gap-2 gap-lg-3 align-items-center ">
+                        <i className="ti ti-arrow-narrow-right fs-four"></i>
+                        Current Highest Voter
+                      </a>
+                    </Link>
                   ) : (
-                    <a
-                      href="/register-voter"
-                      className="cmn-btn link link-xxl-color fs-five  gap-2 gap-lg-3 align-items-center "
-                    >
-                      <i className="ti ti-arrow-narrow-right fs-four"></i> All
-                      Voters
-                    </a>
+                    <Link href="/all-voters">
+                      <a className="cmn-btn link link-xxl-color fs-five  gap-2 gap-lg-3 align-items-center ">
+                        <i className="ti ti-arrow-narrow-right fs-four"></i> All
+                        Voters
+                      </a>
+                    </Link>
                   )}
                 </div>
               </div>

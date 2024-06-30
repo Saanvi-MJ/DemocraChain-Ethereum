@@ -13,14 +13,7 @@ import { VOTING_DAPP_CONTEXT } from "../context/context";
 const registerVoters = () => {
   const [candidates, setCandidates] = useState();
 
-  const {
-    notifySuccess,
-    notifyError,
-    setLoader,
-    loader,
-    VOTING_DAPP,
-    GET_REGISTER_VOTERS,
-  } = useContext(VOTING_DAPP_CONTEXT);
+  const { GET_REGISTER_VOTERS } = useContext(VOTING_DAPP_CONTEXT);
 
   useEffect(() => {
     const fetchData = async () => {

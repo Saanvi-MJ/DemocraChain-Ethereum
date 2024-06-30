@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const WhyVote = () => {
@@ -32,14 +33,13 @@ const WhyVote = () => {
                     Voting is a fundamental civic duty that empowers individuals
                     to influence government decisions and policies.
                   </p>
-                  <a
-                    href="/approve-voter"
-                    className="cmn-btn link secondary-link fs-six-up  gap-2 gap-lg-3 align-items-center mt-5"
-                  >
-                    {" "}
-                    Check Voters{" "}
-                    <i className="ti ti-arrow-narrow-right fs-four"></i>
-                  </a>
+                  <Link href="/approve-voters">
+                    <a className="cmn-btn link secondary-link fs-six-up  gap-2 gap-lg-3 align-items-center mt-5">
+                      {" "}
+                      Check Voters{" "}
+                      <i className="ti ti-arrow-narrow-right fs-four"></i>
+                    </a>
+                  </Link>
                 </div>
               </div>
               <div className="col-xxl-12 mt-7 mt-md-8 mt-xxl-3">
@@ -58,14 +58,13 @@ const WhyVote = () => {
                       process, ensuring that your voice and the collective will
                       of the people are heard.
                     </p>
-                    <a
-                      href="/approve-candidate"
-                      className="cmn-btn link secondary-link fs-six-up  gap-2 gap-lg-3 align-items-center mt-5"
-                    >
-                      {" "}
-                      Check Candidates{" "}
-                      <i className="ti ti-arrow-narrow-right fs-four"></i>
-                    </a>
+                    <Link href="/approve-candidates">
+                      <a className="cmn-btn link secondary-link fs-six-up  gap-2 gap-lg-3 align-items-center mt-5">
+                        {" "}
+                        Check Candidates{" "}
+                        <i className="ti ti-arrow-narrow-right fs-four"></i>
+                      </a>
+                    </Link>
                   </div>
                 </div>
               </div>

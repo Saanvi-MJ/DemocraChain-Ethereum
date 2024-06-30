@@ -95,12 +95,12 @@ const Header = () => {
                 </button>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link href="/register-candidate">
+                    <Link href="/all-candidates">
                       <a className="dropdown-item header-hover-link">All Candidates</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/approve-candidate">
+                    <Link href="/approve-candidates">
                       <a className="dropdown-item header-hover-link">Approved Candidates</a>
                     </Link>
                   </li>
@@ -116,18 +116,18 @@ const Header = () => {
                 </button>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link href="/register-voter">
+                    <Link href="/all-voters">
                       <a className="dropdown-item header-hover-link">All Voters</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/approve-voter">
+                    <Link href="/approve-voters">
                       <a className="dropdown-item header-hover-link">Approve Voters</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/all-voters-voted">
-                      <a className="dropdown-item header-hover-link">All Voted Voters</a>
+                    <Link href="/voted-voters">
+                      <a className="dropdown-item header-hover-link">Voted Voters</a>
                     </Link>
                   </li>
                 </ul>
