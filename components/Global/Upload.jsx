@@ -16,8 +16,8 @@ const Upload = ({ setLoader, notifySuccess, notifyError, setPdf }) => {
           data: formData,
           maxBodyLength: "Infinity",
           headers: {
-            pinata_api_key: `12334e89c69a413613e0`,
-            pinata_secret_api_key: `02779bdb49f3443d4501cf68c761b966fddbbe41f44a0905f674b8b558acb873`,
+            pinata_api_key: process.env.NEXT_PUBLIC_PINATA_KEY,
+            pinata_secret_api_key: process.env.NEXT_PUBLIC_PINATA_SECRET,
             "Content-Type": "multipart/form-data",
           },
         });
@@ -28,6 +28,7 @@ const Upload = ({ setLoader, notifySuccess, notifyError, setPdf }) => {
         setLoader(false);
         notifySuccess("Cover Image Uploade Successfully");
       } catch (error) {
+        console.log(error.message);
         setLoader(false);
         notifyError("Unable to upload image to Pinata");
       }

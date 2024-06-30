@@ -54,7 +54,7 @@ const index = () => {
       <WhyVote />
       <Provide />
       <Vote />
-      <Trust />
+      {/* <Trust /> */}
       <Blog />
       <Footer />
     </>
