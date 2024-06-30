@@ -8,7 +8,6 @@ import {
   Team,
 } from "../components/index";
 import Loader from "../components/Global/Loader";
-///IMPORTING CONTRCT DATA
 import { VOTING_DAPP_CONTEXT } from "../context/context";
 
 const registerVoters = () => {
@@ -18,11 +17,7 @@ const registerVoters = () => {
   const [user, setUser] = useState();
 
   const {
-    notifySuccess,
-    notifyError,
-    setLoader,
     loader,
-    VOTING_DAPP,
     GET_REGISTER_CANDIDATES,
     GIVE_VOTE,
     ALL_VOTERS_VOTED,

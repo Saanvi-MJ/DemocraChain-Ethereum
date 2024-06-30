@@ -23,7 +23,6 @@ const registerCandidate = () => {
     checkVote,
     INITIAL_CONTRACT_DATA,
     GET_SINGLE_VOTER,
-    address,
     checkIfWalletIsConnected,
   } = useContext(VOTING_DAPP_CONTEXT);
 

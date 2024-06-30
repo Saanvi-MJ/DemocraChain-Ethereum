@@ -7,7 +7,6 @@ import {
   Header,
   Team,
 } from "../components/index";
-//IMPORTING CONTRCT DATA
 import { VOTING_DAPP_CONTEXT } from "../context/context";
 
 const registerVoters = () => {
