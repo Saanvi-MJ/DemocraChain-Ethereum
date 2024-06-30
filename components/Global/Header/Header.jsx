@@ -32,21 +32,45 @@ const Header = () => {
               <span></span>
               <span></span>
             </button>
-            <Link
-              href="/"
-              className="navbar-brand m-0 p-0 d-flex align-items-center gap-5 gap-xl-5 me-2"
-            >
-              <a>
+            <Link href="/">
+              <a className="navbar-brand m-0 p-0 d-flex align-items-center gap-5 gap-xl-5 me-2">
                 <img
-                  src="assets/images/fav.png"
+                  style={{
+                    width: "3rem",
+                    height: "3rem",
+                  }}
+                  src="assets/images/logo.png"
                   className="logo small_logo d-sm-none"
                   alt="logo"
                 />
-                <img
-                  src="assets/images/logo.png"
-                  className="logo d-none d-sm-flex"
-                  alt="logo"
-                />
+                <div
+                  style={{
+                    justifyContent: "center",
+                    alignItems: "center",
+                    gap: 16,
+                  }}
+                  className="d-none d-sm-flex"
+                >
+                  <img
+                    style={{
+                      width: "2.5rem",
+                      height: "2.5rem",
+                    }}
+                    src="assets/images/logo.png"
+                    className="logo"
+                    alt="logo"
+                  />
+                  <h1
+                    style={{
+                      fontSize: "2.1rem",
+                      fontFamily: "Tiny5",
+                      fontWeight: 400,
+                      fontStyle: "normal",
+                    }}
+                  >
+                    DemocraChain
+                  </h1>
+                </div>
               </a>
             </Link>
           </div>

@@ -1,10 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
 
-import {
-  Cursor,
-  Preloader,
-  ScrollToTop,
-} from "../components/index";
+import { Cursor, Preloader, ScrollToTop } from "../components/index";
 
 import Input from "../components/Global/Input";
 import Upload from "../components/Global/Upload";
@@ -15,6 +11,7 @@ import Loader from "../components/Global/Loader";
 import PopUp from "../components/Global/PopUp";
 
 import { VOTING_DAPP_CONTEXT } from "../context/context";
+import Link from "next/link";
 
 const voter = () => {
   const {
@@ -90,10 +87,36 @@ const voter = () => {
             <div className="col-12 col-md-6 col-lg-5 col-xxl-5 offset-xxl-1 text-center ms-xl-auto mx-auto">
               <div className="sign__content ms-md-5 ms-xxl-0 pt-120 pb-120">
                 <div className="head_part">
-                  <a href="/">
-                    {" "}
-                    <img src="assets/images/logo.png" alt="Logo" />
-                  </a>
+                  <Link href="/">
+                    <a
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "start",
+                        gap: 16,
+                      }}
+                    >
+                      <img
+                        style={{
+                          width: "3.2rem",
+                          height: "3.2rem",
+                        }}
+                        src="assets/images/logo.png"
+                        className="logo"
+                        alt="logo"
+                      />
+                      <h1
+                        style={{
+                          fontSize: "3.5rem",
+                          fontFamily: "Tiny5",
+                          fontWeight: 400,
+                          fontStyle: "normal",
+                        }}
+                      >
+                        DemocraChain
+                      </h1>
+                    </a>
+                  </Link>
                   <h5 className="mt-5 mt-lg-6">Register as a voter </h5>
                 </div>
 
