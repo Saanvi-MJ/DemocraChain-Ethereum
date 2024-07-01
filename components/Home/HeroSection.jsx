@@ -22,6 +22,7 @@ const HeroSection = ({ initialData, higest }) => {
                     <p className="fs-six">
                       {motto.split("").map((l, idx) => (
                         <span
+                          key={idx}
                           style={{
                             transform: `rotate(${
                               (idx * 360) / motto.length
@@ -96,32 +97,6 @@ const HeroSection = ({ initialData, higest }) => {
               />
             </div>
           </div>
-          <ul className="list_items col-12 d-flex row-gap-6 gap-lg-15 justify-content-between flex-wrap pt-2 pt-lg-15 pt-xl-2 pt-xxl-15 pb-15">
-            <li className="d-flex gap-3 align-items-center">
-              <span className="d-center s1-bg p-3 p-lg-4 rounded-circle">
-                <i className="ti ti-tools fs-three nb4-color"></i>
-              </span>
-              <h4 className="s1-color">Register as Voter</h4>
-            </li>
-            <li className="d-flex gap-3 align-items-center">
-              <span className="d-center s1-bg p-3 p-lg-4 rounded-circle">
-                <i className="ti ti-trending-up fs-three nb4-color"></i>
-              </span>
-              <h4 className="s1-color"> Candidate</h4>
-            </li>
-            <li className="d-flex gap-3 align-items-center">
-              <span className="d-center s1-bg p-3 p-lg-4 rounded-circle">
-                <i className="ti ti-broadcast fs-three nb4-color"></i>
-              </span>
-              <h4 className="s1-color">Get Approval</h4>
-            </li>
-            <li className="d-flex gap-3 align-items-center">
-              <span className="d-center s1-bg p-3 p-lg-4 rounded-circle">
-                <i className="ti ti-percentage fs-three nb4-color"></i>
-              </span>
-              <h4 className="s1-color">Give Vote</h4>
-            </li>
-          </ul>
         </div>
       </div>
     </section>
