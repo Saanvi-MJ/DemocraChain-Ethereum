@@ -9,17 +9,17 @@ const devsInfo = [
     imageUrl: "assets/images/devs/soorya.png",
   },
   {
-    name: "Saanvi MJ",
+    name: "Saanvi M J",
     description: "When I first started trading But with time and experience.",
     imageUrl: "assets/images/devs/saanvi.jpg",
   },
   {
-    name: "Likhith SV",
+    name: "Likhith S V",
     description: "When I first started trading But with time and experience.",
     imageUrl: "assets/images/devs/likhith.jpg",
   },
   {
-    name: "Hamsa CS",
+    name: "Hamsa C S",
     description: "When I first started trading But with time and experience.",
     imageUrl: "assets/images/devs/hamsa.jpg",
   },
