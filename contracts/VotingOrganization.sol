@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
-
-contract VotingOrganization {
+import "./LIKI.sol";
+contract VotingOrganization is CityList {
     address public owner;
     uint256 public startTime;
     uint256 public endTime;
