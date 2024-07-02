@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
-import "./LIKI.sol";
-contract VotingOrganization is CityList {
+
+contract VotingOrganization {
     address public owner;
     uint256 public startTime;
     uint256 public endTime;
@@ -9,7 +9,11 @@ contract VotingOrganization is CityList {
     uint256 private voterIdCounter;
     uint256 private candidateIdCounter;
 
-    enum ApprovalStatus {Pending, Approved, Rejected}
+    enum ApprovalStatus {
+        Pending,
+        Approved,
+        Rejected
+    };
 
     struct Voter {
         address voterAddress;
@@ -45,34 +49,56 @@ contract VotingOrganization is CityList {
     }
 
     modifier onlyDuringVotingPeriod() {
-        require(block.timestamp >= startTime && block.timestamp <= endTime, "Voting is not active.");
+        require(
+            block.timestamp >= startTime && block.timestamp <= endTime,
+            "Voting is not active."
+        );
         _;
     }
 
     constructor() {
         owner = msg.sender;
-        voterIdCounter = 1;  
-        candidateIdCounter = 1;  
+        voterIdCounter = 1;
+        candidateIdCounter = 1;
     }
 
-    
     function registerVoter(string memory _name, string memory _ipfs) public {
-        Voter memory newVoter = Voter(msg.sender, _name, _ipfs, voterIdCounter, ApprovalStatus.Pending, false, "Currently your registertion is pending");
+        Voter memory newVoter = Voter(
+            msg.sender,
+            _name,
+            _ipfs,
+            voterIdCounter,
+            ApprovalStatus.Pending,
+            false,
+            "Currently your registertion is pending"
+        );
         voters[msg.sender] = newVoter;
         registeredVoters.push(msg.sender);
-        voterIdCounter++;  // Increment counter for next voter
+        voterIdCounter++;
     }
 
-   
-    function registerCandidate(string memory _name, string memory _ipfs) public {
-        Candidate memory newCandidate = Candidate(msg.sender, _name, _ipfs, candidateIdCounter, ApprovalStatus.Pending, 0, "Currently your registertion is pending");
+    function registerCandidate(
+        string memory _name,
+        string memory _ipfs
+    ) public {
+        Candidate memory newCandidate = Candidate(
+            msg.sender,
+            _name,
+            _ipfs,
+            candidateIdCounter,
+            ApprovalStatus.Pending,
+            0,
+            "Currently your registertion is pending"
+        );
         candidates[msg.sender] = newCandidate;
         registeredCandidates.push(msg.sender);
-        candidateIdCounter++;  // Increment counter for next candidate
+        candidateIdCounter++;
     }
 
-   
-    function approveVoter(address _voterAddress, string memory _message) public onlyOwner {
+    function approveVoter(
+        address _voterAddress,
+        string memory _message
+    ) public onlyOwner {
         Voter storage voter = voters[_voterAddress];
         require(voter.voterAddress != address(0), "Voter not found.");
         voter.status = ApprovalStatus.Approved;
@@ -80,38 +106,53 @@ contract VotingOrganization is CityList {
         approvedVoters.push(_voterAddress);
     }
 
-   
-    function approveCandidate(address _candidateAddress, string memory _message) public onlyOwner {
+    function approveCandidate(
+        address _candidateAddress,
+        string memory _message
+    ) public onlyOwner {
         Candidate storage candidate = candidates[_candidateAddress];
-        require(candidate.candidateAddress != address(0), "Candidate not found.");
+        require(
+            candidate.candidateAddress != address(0),
+            "Candidate not found."
+        );
         candidate.status = ApprovalStatus.Approved;
         candidate.message = _message;
         approvedCandidates.push(_candidateAddress);
     }
 
-     function rejectVoter(address _voterAddress, string memory _message) public onlyOwner {
+    function rejectVoter(
+        address _voterAddress,
+        string memory _message
+    ) public onlyOwner {
         Voter storage voter = voters[_voterAddress];
         require(voter.voterAddress != address(0), "Voter not found.");
         voter.status = ApprovalStatus.Rejected;
         voter.message = _message;
     }
 
-    function rejectCandidate(address _candidateAddress, string memory _message) public onlyOwner {
+    function rejectCandidate(
+        address _candidateAddress,
+        string memory _message
+    ) public onlyOwner {
         Candidate storage candidate = candidates[_candidateAddress];
-        require(candidate.candidateAddress != address(0), "Candidate not found.");
+        require(
+            candidate.candidateAddress != address(0),
+            "Candidate not found."
+        );
         candidate.status = ApprovalStatus.Rejected;
         candidate.message = _message;
         approvedCandidates.push(_candidateAddress);
     }
 
-  
-    function setVotingPeriod(uint256 _startTime, uint256 _endTime) public onlyOwner {
+    function setVotingPeriod(
+        uint256 _startTime,
+        uint256 _endTime
+    ) public onlyOwner {
         require(_startTime < _endTime, "Start time must be before end time.");
         startTime = _startTime;
         endTime = _endTime;
     }
 
-   
     function getAllRegisteredVoters() public view returns (Voter[] memory) {
         Voter[] memory voterArray = new Voter[](registeredVoters.length);
         for (uint256 i = 0; i < registeredVoters.length; i++) {
@@ -120,8 +161,14 @@ contract VotingOrganization is CityList {
         return voterArray;
     }
 
-    function getAllRegisteredCandidates() public view returns (Candidate[] memory) {
-        Candidate[] memory candidateArray = new Candidate[](registeredCandidates.length);
+    function getAllRegisteredCandidates()
+        public
+        view
+        returns (Candidate[] memory)
+    {
+        Candidate[] memory candidateArray = new Candidate[](
+            registeredCandidates.length
+        );
         for (uint256 i = 0; i < registeredCandidates.length; i++) {
             candidateArray[i] = candidates[registeredCandidates[i]];
         }
@@ -136,19 +183,29 @@ contract VotingOrganization is CityList {
         return voterArray;
     }
 
-    function getAllApprovedCandidates() public view returns (Candidate[] memory) {
-        Candidate[] memory candidateArray = new Candidate[](approvedCandidates.length);
+    function getAllApprovedCandidates()
+        public
+        view
+        returns (Candidate[] memory)
+    {
+        Candidate[] memory candidateArray = new Candidate[](
+            approvedCandidates.length
+        );
         for (uint256 i = 0; i < approvedCandidates.length; i++) {
             candidateArray[i] = candidates[approvedCandidates[i]];
         }
         return candidateArray;
     }
 
-    function getVoter(address _voterAddress) public view returns (Voter memory) {
+    function getVoter(
+        address _voterAddress
+    ) public view returns (Voter memory) {
         return voters[_voterAddress];
     }
 
-    function getCandidate(address _candidateAddress) public view returns (Candidate memory) {
+    function getCandidate(
+        address _candidateAddress
+    ) public view returns (Candidate memory) {
         return candidates[_candidateAddress];
     }
 
@@ -161,7 +218,10 @@ contract VotingOrganization is CityList {
 
     function updateCandidate(string memory _name, string memory _ipfs) public {
         Candidate storage candidate = candidates[msg.sender];
-        require(candidate.candidateAddress != address(0), "Candidate not found.");
+        require(
+            candidate.candidateAddress != address(0),
+            "Candidate not found."
+        );
         candidate.name = _name;
         candidate.ipfs = _ipfs;
     }
@@ -191,12 +251,18 @@ contract VotingOrganization is CityList {
 
     function vote(address _candidateAddress) public onlyDuringVotingPeriod {
         Voter storage voter = voters[msg.sender];
-        require(voter.status == ApprovalStatus.Approved, "You are not an approved voter.");
+        require(
+            voter.status == ApprovalStatus.Approved,
+            "You are not an approved voter."
+        );
         require(!voter.hasVoted, "You have already voted.");
-        
+
         Candidate storage candidate = candidates[_candidateAddress];
-        require(candidate.status == ApprovalStatus.Approved, "Candidate is not approved.");
-        
+        require(
+            candidate.status == ApprovalStatus.Approved,
+            "Candidate is not approved."
+        );
+
         voter.hasVoted = true;
         candidate.voteCount++;
         votersWhoVoted.push(msg.sender);
