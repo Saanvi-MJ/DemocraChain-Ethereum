@@ -13,7 +13,7 @@ contract VotingOrganization {
         Pending,
         Approved,
         Rejected
-    };
+    }
 
     struct Voter {
         address voterAddress;

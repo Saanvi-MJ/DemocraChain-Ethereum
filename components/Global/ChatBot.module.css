@@ -1,0 +1,215 @@
+.init {
+  background-color: #333333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.chatContainer {
+  width: 300px;
+  height: 500px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.chatHeader {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #333333;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.profileImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.chatHeaderText {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.chatBotName {
+  font-weight: bold;
+}
+
+.onlineStatus {
+  font-size: 12px;
+  color: #e1f4f3;
+}
+
+.chatBox {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.msg {
+  background-color: #e1f4f3;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px 0;
+  max-width: 80%;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.test.rep {
+  background-color: #4D869C;
+  align-self: flex-end;
+}
+
+.opt {
+  display: block;
+  margin: 10px 0;
+  color: #333333;
+  cursor: pointer;
+  text-align: center;
+}
+
+.opt a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.opt a:hover {
+  text-decoration: underline;
+}
+
+.mLink {
+  color: #333333;
+  text-decoration: none;
+}
+
+.mLink:hover {
+  text-decoration: underline;
+}
+
+.link {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* Add this to your existing CSS */
+.profileButton {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  transition: transform 0.3s;
+}
+
+.profileButton:hover {
+  transform: scale(1.1);
+}
+
+.chatContainer {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  max-height: 400px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.chatHeader {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+}
+
+.profileImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.chatHeaderText {
+  display: flex;
+  flex-direction: column;
+}
+
+.chatBotName {
+  font-weight: bold;
+}
+
+.onlineStatus {
+  font-size: 0.8em;
+  color: #00ff00;
+}
+
+.chatBox {
+  padding: 10px;
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+.msg {
+  padding: 8px;
+  margin: 5px 0;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+.opt {
+  display: block;
+  padding: 8px;
+  margin: 5px 0;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.opt:hover {
+  background-color: #0056b3;
+}
+
+.mLink {
+  color: inherit;
+  text-decoration: none;
+}
+
+.mLink:hover {
+  text-decoration: underline;
+}
+
+.link {
+  display: block;
+  margin-top: 10px;
+}
+
