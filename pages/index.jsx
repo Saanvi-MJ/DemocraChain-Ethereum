@@ -4,6 +4,7 @@ import React, { useState, useEffect, useContext } from "react";
 import {
   Cursor,
   Preloader,
+  ChatBot,
   ScrollToTop,
   Footer,
   Header,
@@ -42,6 +43,7 @@ const index = () => {
     <>
       {loading && <Preloader />}
       <ScrollToTop />
+      <ChatBot />
       <Cursor />
       <Header />
       <HeroSection initialData={initialData} higest={higest} />
