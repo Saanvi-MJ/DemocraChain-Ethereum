@@ -2,7 +2,7 @@ import { ethers } from "ethers";
 import Web3Modal from "web3modal";
 
 //IMPORT CONTRACT ABI
-import votingOrganization from "../artifacts/contracts/VotingOrganization.sol/VotingOrganization.json";
+import votingOrganization from "./VotingOrganization.json";
 
 export const OWNER_ADDRESS = process.env.NEXT_PUBLIC_OWNER_ADDRESS;
 

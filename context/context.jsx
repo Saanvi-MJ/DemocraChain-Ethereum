@@ -15,8 +15,6 @@ export const VOTING_DAPP_CONTEXT = React.createContext();
 
 export const VOTER_DAPP_PROVIDER = ({ children }) => {
   const VOTING_DAPP = "Voting Dapp";
-  const currency = "MATIC";
-  const network = "Polygon";
 
   const router = useRouter();
   const [loader, setLoader] = useState(false);
