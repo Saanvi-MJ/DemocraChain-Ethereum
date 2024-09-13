@@ -31,7 +31,7 @@ const signup = () => {
   //FILES
   const [pdf, setPdf] = useState(null);
   const [image, setImage] = useState(null);
-  cosnst[(loadConfig, setLoading)] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   //CANDIDATE DETAIL
   const [updateCandidate, setUpdateCandidate] = useState({
