@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
 import toast from "react-hot-toast";
@@ -15,8 +15,6 @@ export const VOTING_DAPP_CONTEXT = React.createContext();
 
 export const VOTER_DAPP_PROVIDER = ({ children }) => {
   const VOTING_DAPP = "Voting Dapp";
-  const currency = "MATIC";
-  const network = "Polygon";
 
   const router = useRouter();
   const [loader, setLoader] = useState(false);
@@ -319,10 +317,10 @@ export const VOTER_DAPP_PROVIDER = ({ children }) => {
       await transaction.wait();
       setLoader(false);
       notifySuccess("Successfully set voting period ");
-      window.location.href = "/";
+      router.push("/");
     } catch (error) {
       setLoader(false);
-      notifySuccess(
+      notifyError(
         "set voting period failed, kindly connect to ellection commission"
       );
       console.log(error);
@@ -519,7 +517,7 @@ export const VOTER_DAPP_PROVIDER = ({ children }) => {
       await transaction.wait();
       setLoader(false);
       notifySuccess("Successfully updated ");
-      window.location.href = "/";
+      router.push("/");
     } catch (error) {
       setLoader(false);
       notifySuccess("updated failed, kindly connect to ellection commission");
@@ -539,7 +537,7 @@ export const VOTER_DAPP_PROVIDER = ({ children }) => {
       await transaction.wait();
       setLoader(false);
       notifySuccess("Successfully RESET ");
-      window.location.href = "/";
+      router.push("/");
     } catch (error) {
       setLoader(false);
       notifySuccess("RESET failed, kindly connect to ellection commission");

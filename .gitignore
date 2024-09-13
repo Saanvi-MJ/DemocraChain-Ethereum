@@ -33,7 +33,6 @@ yarn-error.log*
 
 artifacts
 cache
-context/*.json
 
 .env*
 !.env.example
