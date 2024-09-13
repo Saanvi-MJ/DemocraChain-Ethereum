@@ -88,6 +88,17 @@ const networks = {
     rpcUrls: ["http://127.0.0.1:8545/"],
     blockExplorerUrls: ["https://bscscan.com"],
   },
+  open_campus: {
+    chainId: `0x${Number(656476).toString(16)}`,
+    chainName: "Open Campus",
+    nativeCurrency: {
+      name: "EDU",
+      symbol: "EDU",
+      decimals: 18,
+    },
+    rpcUrls: ["https://rpc.open-campus-codex.gelato.digital"],
+    blockExplorerUrls: ["https://opencampus-codex.blockscout.com"],
+  },
 };
 
 const changeNetwork = async ({ networkName }) => {
@@ -107,7 +118,7 @@ const changeNetwork = async ({ networkName }) => {
 };
 
 export const handleNetworkSwitch = async () => {
-  const networkName = "localhost";
+  const networkName = process.env.NEXT_PUBLIC_NETWORK;
   await changeNetwork({ networkName });
 };
 
