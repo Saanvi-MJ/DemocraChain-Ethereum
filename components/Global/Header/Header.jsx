@@ -175,7 +175,9 @@ const Header = () => {
                 </ul>
               </li>
               {address === OWNER_ADDRESS?.toLowerCase() && (
-                <li>
+                <li style={{
+                  marginRight: 20
+                }}>
                   <Link href="/owner">
                     <a className="dropdown-item header-hover-link">Owner</a>
                   </Link>
