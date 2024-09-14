@@ -82,7 +82,7 @@
 }
 
 .msg {
-  background-color: #0000;
+  background-color: ;
   padding: 12px;
   border-radius: 12px;
   margin: 8px 0;
@@ -99,7 +99,7 @@
 }
 
 .test.rep {
-  background-color: #4D869C;
+  background-color: #ffdf69;
   align-self: flex-end;
 }
 
