@@ -28,7 +28,7 @@ const WhyVote = () => {
               <div className="col-xxl-6 offset-xxl-2">
                 <div className="why-trade__part">
                   <span className="heading fs-five">Why Vote </span>
-                  <h3 className="mb-3 mt-5">Prime Minister (EC)</h3>
+                  <h3 className="mb-3 mt-5">Candidate  (EC)</h3>
                   <p>
                     Voting is a fundamental civic duty that empowers individuals
                     to influence government decisions and policies.

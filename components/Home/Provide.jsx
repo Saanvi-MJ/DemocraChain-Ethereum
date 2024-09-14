@@ -19,12 +19,11 @@ const Provide = () => {
                 We Provide World’s
               </span>
               <h3 className="mb-5 mb-lg-6">
-                Join a club of more than{" "}
-                <span className="s1-color">480,000</span> traders
+              Decentralized voting community{" "}
+                <span className="s1-color"></span> 
               </h3>
               <p className="fs-six-up mx-ch mx-auto">
-                Trading is the art and science of buying and selling financial
-                instruments, such as stocks bonds currencies commodities
+              Voting is a fundamental duty as a citizen of nation.
               </p>
             </div>
           </div>
@@ -37,8 +36,7 @@ const Provide = () => {
               </span>
               <h4 className="mt-5 mb-5">Best Reputation</h4>
               <p>
-                transformed the trading landscape. Online trading platforms and
-                mobile apps have made it easier than ever for individuals
+              At Best Reputation, we enhance your online presence with integrity and excellence. Trust our expert team to build and maintain your brand's credibility, ensuring you shine in the digital world.
               </p>
             </div>
           </div>
@@ -47,10 +45,9 @@ const Provide = () => {
               <span className="provide-card__icon d-center nb4-bg p-4 rounded-circle mx-auto">
                 <i className="ti ti-users fs-three p1-color"></i>
               </span>
-              <h4 className="mt-5 mb-5">480,000+ Clients</h4>
+              <h4 className="mt-5 mb-5">Welcome to Democrochain</h4>
               <p>
-                One of the fundamental principles of trading is risk management.
-                Successful traders carefully manage their capital,
+              Join millions in shaping our nation's future by casting your vote. Every vote counts—be informed, get involved, and make a difference. Vote responsibly!
               </p>
             </div>
           </div>
@@ -61,8 +58,7 @@ const Provide = () => {
               </span>
               <h4 className="mt-5 mb-5">Trusted and Secure</h4>
               <p>
-                Trading is not without its challenges, as markets can be highly
-                volatile and unpredictable. It requires discipline
+              At Trusted and Secure, your safety is our priority. We offer robust solutions to protect your data and ensure secure transactions. Choose us for peace of mind in the digital age.
               </p>
             </div>
           </div>
