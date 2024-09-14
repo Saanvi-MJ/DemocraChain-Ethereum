@@ -2,12 +2,18 @@ import { ethers } from "ethers";
 import Web3Modal from "web3modal";
 
 //IMPORT CONTRACT ABI
-import votingOrganization from "./VotingOrganization.json";
+import votingOrganization from "../artifacts/contracts/VotingOrganization.sol/VotingOrganization.json";
+import ElectoralBond from "../artifacts/contracts/ElectoralBond.sol/ElectoralBond.json";
 
 export const OWNER_ADDRESS = process.env.NEXT_PUBLIC_OWNER_ADDRESS;
 
-export const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS;
-export const CONTRACT_ABI = votingOrganization.abi;
+export const VOTING_CONTRACT_ADDRESS =
+  process.env.NEXT_PUBLIC_VOTING_CONTRACT_ADDRESS;
+export const VOTING_CONTRACT_ABI = votingOrganization.abi;
+
+export const BOND_CONTRACT_ADDRESS =
+  process.env.NEXT_PUBLIC_BOND_CONTRACT_ADDRESS;
+export const BOND_CONTRACT_ABI = ElectoralBond.abi;
 
 //NETWORK
 const networks = {
@@ -161,9 +167,34 @@ export const VOTING_CONTRACT = async () => {
     const provider = new ethers.providers.Web3Provider(connection);
     const signer = provider.getSigner();
 
-    const contract = fetchContract(CONTRACT_ADDRESS, CONTRACT_ABI, signer);
+    const contract = fetchContract(
+      VOTING_CONTRACT_ADDRESS,
+      VOTING_CONTRACT_ABI,
+      signer
+    );
     return contract;
   } catch (error) {
     console.log("Something went wrong while connecting with contract", error);
+  }
+};
+
+export const BOND_CONTRACT = async () => {
+  try {
+    const web3Modal = new Web3Modal();
+    const connection = await web3Modal.connect();
+    const provider = new ethers.providers.Web3Provider(connection);
+    const signer = provider.getSigner();
+
+    const contract = fetchContract(
+      BOND_CONTRACT_ADDRESS,
+      BOND_CONTRACT_ABI,
+      signer
+    );
+    return contract;
+  } catch (error) {
+    console.log(
+      "Something went wrong while connecting with bond contract",
+      error
+    );
   }
 };

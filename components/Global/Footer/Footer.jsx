@@ -32,7 +32,7 @@ const Footer = () => {
           </div>
           <div className="row gy-6 w-100 text-center text-sm-start align-items-center justify-content-sm-between">
             <div className="col-sm-8">
-              <h2>Start earning with only $20</h2>
+              <h2>Refer and Earn $20</h2>
               <p className="fs-six-up fw_500 mt-5">
                 Try our super easy portal for free
               </p>
