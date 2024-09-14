@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { ethers } from "ethers";
 
 //INTERNAL  IMPORT
 import {
@@ -9,6 +10,7 @@ import {
   connectWallet,
   VOTING_CONTRACT,
   OWNER_ADDRESS,
+  BOND_CONTRACT,
 } from "./constants";
 
 export const VOTING_DAPP_CONTEXT = React.createContext();
@@ -66,7 +68,8 @@ export const VOTER_DAPP_PROVIDER = ({ children }) => {
     notifySuccess("Registering Candidate, kindly wait...");
     setLoader(true);
 
-    const CONTRACT = await VOTING_CONTRACT();
+    const votingContract = await VOTING_CONTRACT();
+    const bondContract = await BOND_CONTRACT();
 
     const data = JSON.stringify({
       _name,
@@ -103,9 +106,14 @@ export const VOTER_DAPP_PROVIDER = ({ children }) => {
       const url = `https://gateway.pinata.cloud/ipfs/${response.data.IpfsHash}`;
       console.log(url);
 
-      const transaction = await CONTRACT.registerCandidate(_name, url);
+      const votingTransaction = await votingContract.registerCandidate(
+        _name,
+        url
+      );
+      const bondTransaction = await bondContract.registerDonee();
 
-      await transaction.wait();
+      await votingTransaction.wait();
+      await bondTransaction.wait();
 
       notifySuccess("Successfully Registered Candidate");
       setLoader(false);
@@ -1109,8 +1117,43 @@ export const VOTER_DAPP_PROVIDER = ({ children }) => {
 
       return candidate;
     } catch (error) {
-      notifySuccess("Failed to get data, kindly reload page");
+      notifyError("Failed to get data, kindly reload page");
       console.log(error);
+    }
+  };
+
+  const GIVE_DONATION = async (doneeAddress, amount) => {
+    try {
+      const userAddress = await checkIfWalletIsConnected();
+      setAddress(userAddress);
+      if (userAddress) {
+        const CONTRACT = await BOND_CONTRACT();
+        const transaction = await CONTRACT.giveDonation(doneeAddress, {
+          value: ethers.utils.parseEther(`${amount}`),
+        });
+        await transaction.wait();
+        notifySuccess("Donation Successfull");
+      }
+    } catch (err) {
+      notifyError("Failed to complete donation, kindly reload page");
+      console.log(err);
+    }
+  };
+
+  const GET_ALL_DONATIONS = async (doneeAddress) => {
+    try {
+      const userAddress = await checkIfWalletIsConnected();
+      setAddress(userAddress);
+      console.log({ doneeAddress });
+      if (!doneeAddress) return [];
+      if (userAddress) {
+        const CONTRACT = await BOND_CONTRACT();
+        const contractDonators = await CONTRACT.getAllDonations(doneeAddress);
+        return contractDonators;
+      }
+    } catch (err) {
+      notifyError("Failed to complete donation, kindly reload page");
+      console.error(err);
     }
   };
 
@@ -1149,6 +1192,8 @@ export const VOTER_DAPP_PROVIDER = ({ children }) => {
         REJECT_CANDIDATE,
         REGISTER_VOTER,
         REJECT_VOTER,
+        GIVE_DONATION,
+        GET_ALL_DONATIONS,
       }}
     >
       {children}

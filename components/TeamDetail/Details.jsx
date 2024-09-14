@@ -1,10 +1,11 @@
-import React, { useState } from "react";
-
+import React, { useContext, useEffect, useState } from "react";
+import { VOTING_DAPP_CONTEXT } from "../../context/context";
 //INTERNAL IMPORT
 import { shortenAddress } from "../../utils";
 import Preview from "../Global/Preview";
 import Link from "next/link";
-
+import { useRouter } from "next/router";
+import { ethers } from "ethers";
 const Details = ({
   candidate,
   path,
@@ -19,9 +20,24 @@ const Details = ({
   currentVotingTime,
   user,
 }) => {
-  console.log(address);
-  console.log(candidate?.address.toLowerCase());
   const [message, setMessage] = useState();
+  const [donators, setDonators] = useState([]);
+  const router = useRouter();
+  const [amount, setAmount] = useState();
+  const [refetch, setRefetch] = useState(false);
+  const { GIVE_DONATION, GET_ALL_DONATIONS } = useContext(VOTING_DAPP_CONTEXT);
+
+  useEffect(() => {
+    const fetchDonators = async () => {
+      if (!router.isReady) return;
+      const d = await GET_ALL_DONATIONS(router?.query.address);
+      if (d) setDonators(d);
+    };
+    fetchDonators();
+  }, [router.isReady, refetch]);
+
+  console.log(donators);
+
   return (
     <section className="team-details pt-120 pb-120 position-relative z-0">
       <div className="container">
@@ -307,6 +323,75 @@ const Details = ({
                 </ul>
               </div>
             </div>
+            {path == "candidate" && (
+              <>
+                <h1 style={{ textAlign: "center", paddingTop: "2rem" }}>
+                  Electoral Bond
+                </h1>
+                <form
+                  onSubmit={async (e) => {
+                    e.preventDefault();
+                    await GIVE_DONATION(router?.query.address, amount).then(
+                      () => {
+                        setAmount("");
+                        setRefetch((prev) => !prev);
+                      }
+                    );
+                  }}
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    paddingTop: "2.5rem",
+                  }}
+                >
+                  <input
+                    type="number"
+                    value={amount}
+                    onChange={(e) => setAmount(e.target.value)}
+                    placeholder="Enter the amount to Donate in ETH..."
+                    name="donate-value"
+                  />
+                  <button
+                    type="submit"
+                    style={{
+                      paddingLeft: "5rem",
+                      paddingRight: "5rem",
+                      color: "#fff6e9",
+                    }}
+                  >
+                    Submit
+                  </button>
+                </form>
+              </>
+            )}
+            {path == "candidate" && (
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  paddingRight: "5rem",
+                  paddingTop: 10,
+                }}
+              >
+                <div style={{ fontSize: 18 }}>Donor Address</div>
+                <div style={{ fontSize: 18 }}>Donated Amount</div>
+              </div>
+            )}
+            {path == "candidate" &&
+              donators.map((d) => (
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    paddingRight: "5rem",
+                    paddingTop: 10,
+                  }}
+                >
+                  <div>{d.donatorAddress}</div>
+                  <div>{ethers.utils.formatEther(d.amount)}</div>
+                </div>
+              ))}
           </div>
         </div>
         <p className="mt-16 align-items-center">

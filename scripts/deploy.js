@@ -4,11 +4,14 @@ async function main() {
   const VotingOrganization = await hre.ethers.getContractFactory(
     "VotingOrganization"
   );
+  const Electoralbond = await hre.ethers.getContractFactory("ElectoralBond");
   const voting = await VotingOrganization.deploy();
+  const bond = await Electoralbond.deploy();
 
   await voting.deployed();
+  await bond.deployed();
 
-  console.log("CONTRACT_ADDRESS:", voting.address);
+  console.log({ voting: voting.address, bond: bond.address });
 }
 
 //npx hardhat run scripts/deploy.js --network polygon_amoy
