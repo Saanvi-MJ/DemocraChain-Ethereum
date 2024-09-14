@@ -3927,5 +3927,7 @@ iframe {
   flex-direction: column;
   gap: 12px;
 }
-
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
 /*# sourceMappingURL=style.min.css.map */
