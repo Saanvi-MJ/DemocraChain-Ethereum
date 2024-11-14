@@ -31,8 +31,8 @@ const Company = () => {
                   </span>
                   <h3 className="mb-3 mt-5">What We Do</h3>
                   <p>
-                    Trading is the art and science of buying and selling
-                    financial instruments, such as stocks bonds currencies.
+                   A group of students from Sai Angels who dreamt to be in IIT but ended up in AIT !!!
+
                   </p>
                 </div>
               </div>
@@ -49,11 +49,8 @@ const Company = () => {
                   <div className="content">
                     <h3 className="mb-3">Who We Are</h3>
                     <p>
-                      Trading in financial markets involves a wide range of
-                      strategies that traders employ to make informed decisions.
-                      From trading to swing trading and long-term investing,
-                      each strategy has its own set of principles and risk
-                      factors.
+                    A group of students from Sai Angels who dreamt to be in IIT but ended up in AIT !!!
+                    Our team, the "mad devs," started with a passion for tech and a knack for chaos. From late-night coding to wild brainstorming sessions, we blend genius with a touch of madness to create groundbreaking solutions—and have a lot of fun doing it!
                     </p>
                   </div>
                 </div>

@@ -51,8 +51,7 @@ const Team = () => {
             <span className="heading p1-color fs-five mb-5">Team</span>
             <h3>Our Team</h3>
             <p className="mt-5 mt-xxl-6 mx-ch mx-auto">
-              Trading has always been a passion, but it wasn't until I refined
-              my strategy and embraced risk management.
+            Innovative 'mad devs' pushing tech limits with creativity and camaraderie..
             </p>
           </div>
         </div>
